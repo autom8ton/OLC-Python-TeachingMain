@@ -1,4 +1,3 @@
-
 # Write a program to find the largest and smallest numbers in 
 # a list using 
 # 1a. max()
@@ -21,54 +20,52 @@ list1 = [2944, 5490, 2357, 2619, 1177, 451, 8299, 2533, 4682, 6040,
 
 ####################################################
 # Answer for Question 1a here
-# maxnum = max(list1)
-# print(f"The biggest number is {maxnum}")
+print(max(list1))
 
 # ####################################################
 # # Answer for Question 1b here
-# minnum = min(list1)
-# print(f"The smallest number is {minnum}")
+print(min(list1))
+
 
 # ####################################################
 # # Answer for Question 1c here
-# maxnum2 = list1[0]
-# for i in list1:
-#     if i > maxnum2:
-#         maxnum2 = i
-# print(f"The biggest number is {maxnum2}")
+maxnum = list1[0]
+
+for i in list1:
+    if i > maxnum:
+        maxnum = i
+
+print(f"The biggest number is {maxnum}")
 
 # ####################################################
 # # Answer for Question 1d here
-# minnum2 = list1[0]
-# for i in list1:
-#     if i < minnum2:
-#         minnum2 = i
-# print(f"The smallest number is {minnum2}")
+
 
 # ####################################################
 # # 1e. find the sum of all the numbers
-# sumnum = 0
-# for i in list1:
-#     sumnum = sumnum + i
+print(sum(list1))
 
-# print(f"The sum of all the numbers is {sumnum}")
+sumnum = 0
+for i in list1:
+    sumnum = sumnum + i #sum += i
+print(f"The sum of all the numbers is {sumnum}")
 
 # ####################################################
 # # 1f. find the count of items in the list
-# print(len(list1))
+print(len(list1))
 
-# count = 0
-# for i in list1:
-#     count = count + 1
+count = 0
+for i in list1:
+    count = count + 1 # count += 1
 
-# print(f"The count of all the numbers is {count}")
+print(f"COunt of items is {count}")
+
+
+
 
 # ####################################################
 # # 1g. find the average of all the numbers
-# average = sumnum / count # OR
-# average = sumnum / len(list1)
 
-# print(f"The average of all the numbers is {average}")
 
 ######################################################
 # Question 2:
@@ -79,12 +76,53 @@ list1 = [2944, 5490, 2357, 2619, 1177, 451, 8299, 2533, 4682, 6040,
 
 # Assume that the first item in the list is swim lane position 1.
 #####################################################
-swim_times = [32.5, 30.1, 33.8, 29.6, 31.2, 34.0, 28.9, 
-              30.4, 38.1, 27.5, 35.6, 31.8, 29.2, 33.0, 30.5]
+swim_times = [32.5, 30.1, 33.8, 29.6, 31.2, 20.0, 28.9, 
+              30.4, 38.1, 27.5, 35.6, 31.8, 29.2, 33.0, 40.5]
 # Answer for Question 2 here
+# fasttime = swim_times[0]
+# slowtime = swim_times[0]
+
+# fastlane = 0
+# slowlane = 0
+
+# count = 0
+# # loop through all the times
+# for stime in swim_times:
+#     if stime < fasttime:
+#         fasttime = stime
+#         fastlane = count
+
+#     if stime > slowtime:
+#         slowtime = stime
+#         slowlane = count
+
+#     count = count + 1 # count += 1
+
+# print(f"The fastest time is {fasttime} at lane {fastlane+1}")
+# print(f"The slowest time is {slowtime} at lane {slowlane+1}")
+
+
+#### option2
+
+# fasttime = swim_times[0]
+# slowtime = swim_times[0]
+
+# fastlane = 0
+# slowlane = 0
 
 # for i in range(len(swim_times)):
-#     print(swim_times[i])
+#     if swim_times[i] < fasttime:
+#         fasttime = swim_times[i]
+#         fastlane = i
+    
+#     if swim_times[i] > slowtime:
+#         slowtime = swim_times[i]
+#         slowlane = i
+
+# print(f"The fastest time is {fasttime} at lane {fastlane+1}")
+# print(f"The slowest time is {slowtime} at lane {slowlane+1}")
+
+
 
 
 
@@ -101,31 +139,22 @@ donations = {
     'Class 4E': 415, 'Class 5F': 390
 }
 # Answer for Question 3 here
-highclass = ""
-lowclass = ""
+maxdonation = 0
+maxclass = ""
 
-highamt = 0
-lowamt = 9999999999999999999
+for thisclass in donations:
+    print(thisclass)
+    print(donations[thisclass])
 
-# loop through a dictionary
+    if donations[thisclass] > maxdonation:
+        maxdonation = donations[thisclass]
+        maxclass = thisclass
+
+print(f"{maxclass} donated the most with ${maxdonation}")
+
 for thisclass, amount in donations.items():
-    if amount > highamt:
-        highamt = amount # remember the current highest value
-        highclass = thisclass
-    if amount < lowamt:
-        lowamt = amount
-        lowclass = thisclass
-
-print(f"{highclass} donated the most with ${highamt}")
-print(f"{lowclass} donated the least with ${lowamt}")
-
-# for thisclass in donations:
-#     print(f"{thisclass}: {donations[thisclass]}")
-
-
-
-
-
+    if amount > maxdonation:
+        maxdonation = amount
 
 
 
@@ -187,3 +216,6 @@ exam_scores = {
     'Ivy': 71, 'Jun': 88, 'Ullas':45, 'Josephine':98,
     'Sor Lang': 23, 'Jimmy': 5, 'Borui': 78, 'Esther': 9}
 # Answer for Question 6 here
+
+
+
