@@ -20,11 +20,66 @@ list1 = [2944, 5490, 2357, 2619, 1177, 451, 8299, 2533, 4682, 6040,
 
 ####################################################
 # Answer for Question 1a here
-print(max(list1))
+# print(max(list1))
+
+# maxnum = list1[0]
+
+# for i in list1:
+#     if i > maxnum:
+#         maxnum = i
+
+# print(maxnum)
+
+maxnum = list1[0]
+maxidx = 0
+# len returns the length of the list
+for i in range(len(list1)):
+    if list1[i] > maxnum:
+        maxnum = list1[i]
+        maxidx = i
+
+list1 = [2944, 5490, 2357, 
+         2619, 
+         1177, 
+         451, 
+         8299, 
+         2533, 
+         4682, 
+         6040,
+         5972, 
+         7532, 4382, 8311, 6664, 4918, 3656, 3769, 6179, 7720]
+
+donations = {
+    'Class 1A': 320, 
+    'Class 1B': 480, 
+    'Class 1C': 290, 
+    'Class 1D': 375,
+    'Class 1G': 450, 
+    'Class 1H': 530, 
+    'Class 2C': 470, 
+    'Class 3D': 310,
+    'Class 4E': 415, 
+    'Class 5F': 390
+}
+
+maxnum = 0 # value
+maxclass = "" # key
+
+for thisclass, amount in donations.items():
+    if amount > maxnum:
+        maxnum = amount
+        maxclass = thisclass
+
+for thisclass in donations: 
+    # thisclass will return the key
+    if donations[thisclass] > maxnum:
+        maxnum = donations[thisclass]
+        maxclass = thisclass
+
 
 # ####################################################
 # # Answer for Question 1b here
-print(min(list1))
+# print(min(list1))
 
 
 # ####################################################
@@ -219,3 +274,44 @@ exam_scores = {
 
 
 
+
+###############################################################
+# Scenario: Employee Performance Review
+
+# Finding Maximum, Minimum, and Average Performance Scores 
+# Without Built-in Functions
+# YOU CANNOT USE ANY PYTHON INBUILT FUNCTIONS TO DO THIS.
+
+# A company conducts annual performance reviews for employees. 
+# Each employee is given a performance score out of 100. 
+# The HR department wants to:
+
+# - Identify the top-performing employee (highest score).
+# - Identify the lowest-performing employee (lowest score).
+# - Calculate the average performance score, rounded to 2 decimal places.
+# - Identify underperforming employees (those with scores below 50) 
+#    -> save them into another dictionary called non_performers.
+#   and print a performance warning message to all of these employees.
+
+performance_scores = {
+    'Alice': 88, 'Benny': 75, 'Charlie': 92, 'David': 85,
+    'Emma': 78, 'Farah': 81, 'George': 66, 'Hassan': 94,
+    'Ivy': 71, 'Jack': 88, 'Liam': 45, 'Jessica': 98,
+    'Samir': 23, 'Jimmy': 5, 'Bryan': 78, 'Estelle': 9}
+
+# write your code here
+
+# to loop through the values of a dictionary
+maxscore = 0
+maxemployee = ""
+
+for emp in performance_scores:
+    print(emp)
+    if performance_scores[emp] > maxscore:
+        maxscore = performance_scores[emp]
+        maxemployee = emp
+
+for emp, scores in performance_scores.items():
+    if scores > maxscore:
+        maxscore = scores
+        maxemployee = emp

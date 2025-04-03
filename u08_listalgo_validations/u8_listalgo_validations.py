@@ -2,45 +2,51 @@
 ###################################################
 # Part 1: Learning Exercises
 
+
 # Exercise 1: Finding the Maximum Without Built-In Functions
 # Write a program to find the largest number in a list without 
 # using max().
+
 list1 = [2944, 5490, 2357, 2619, 1177, 451, 8299, 2533, 4682, 6040,
          5972, 7532, 4382, 8311, 6664, 4918, 3656, 3769, 6179, 7720,
          1777, 7149, 2175, 8665, 4586, 5208, 320, 1314, 8950, 4884,
          756, 6196, 5935, 5291, 8619, 2630, 1831, 3127, 4698, 6291,
          2478, 5792, 9362, 7348, 8040, 3556, 598, 6187, 8959, 880]
+bignum = max(list1)
+print(bignum)
 
-# max function/ min function
-# bignum = max(list1)
-# print(bignum)
+smallnum = min(list1)
+print(smallnum)
 
-# smallnum = min(list1)
-# print(smallnum)
 
-# maxnum = list1[0] # what if 0 is not the smallest
-# minnum = list1[0]
 
-# bigindex = 0
-# smallindex = 0
 
-# count = 0
+#------------------------------------------------------------
+# Exercise 2: Calculating the Sum Without Built-In Functions
+# Write a program to calculate the sum of numbers in a list 
+# without using sum().
+# find the position of the biggest and slowest
+maxnum = list1[0]
+minnum = list1[0]
 
-# for i in list1:
-    
-#     if i > maxnum: # check if this current number is bigger than maxnum
-#         maxnum = i # if yes, then set maxnum to this current number (i)
-#         bigindex = count
+bigpos = 0
+smallpos = 0
+count = 0
 
-#     if i < minnum:
-#         minnum = i
-#         smallindex = count
+for i in list1:
+    if i >maxnum:
+        maxnum = i
+        bigpos = count
 
-#     count = count + 1 # count +=1
-    
+    if i <minnum:
+        minnum = i
+        smallpos = count
 
-# print(f"The biggest number is {maxnum} at position {bigindex}")
-# print(f"The smallest number is {minnum} at position {smallindex}")
+    count = count+ 1
+
+print(f"the biggest is {maxnum} and it is at {bigpos} ")
+print(f"the smallest is {minnum} and it is at {smallpos} ")
+
 
 
 # The school's swimming coach has recorded the 50m freestyle 
@@ -50,42 +56,38 @@ list1 = [2944, 5490, 2357, 2619, 1177, 451, 8299, 2533, 4682, 6040,
 
 # Assume that the first item in the list is swim lane position 1.
 #####################################################
-swim_times = [32.5, 89.1, 33.8, 29.6, 31.2, 34.0, 28.9, 
-              30.4, 38.1, 27.5, 35.6, 31.8, 29.2, 33.0, 5.5]
-# Answer for here
-
+swim_times = [32.5, 30.1, 33.8, 29.6, 31.2, 34.0, 28.9, 
+              30.4, 38.1, 27.5, 35.6, 31.8, 29.2, 33.0, 30.5]
+# # Answer for here
 fasttime = swim_times[0]
 slowtime = swim_times[0]
 
+
 fastlane = 0
 slowlane = 0
+count = 0
 
-for i in range(len(swim_times)):
-    if swim_times[i] < fasttime:
-        fasttime = swim_times[i]
-        fastlane = i # zero based index
+for i in swim_times:
+    if i <fasttime:
+        fasttime = i
+        fastlane = count
 
-    if swim_times[i] > slowtime:
-        slowtime = swim_times[i]
-        slowlane = i
+    if i >slowtime:
+        slowtime = i
+        slowlane = count
 
-print(f"The fastest swimmer is {fastlane+1} time: {fasttime}")
-print(f"The slowest swimmer is {slowlane+1} time: {slowtime}")
+    count =count +1        
 
-
-
-
-#------------------------------------------------------------
-# Exercise 2: Calculating the Sum Without Built-In Functions
-# Write a program to calculate the sum of numbers in a list 
-# without using sum().
-
+print(f"the fastest time is {fasttime} and it is at {fastlane} ")
+print(f"the slowest time is {slowtime} and it is at {slowlane} ")
+   
 
 
 #------------------------------------------------------------
 # Exercise 3: Calculating the Average of a List
 # Write a program to calculate the average of numbers in a list.
 # Example: Input = [4, 8, 12, 16, 20], Output = 12.
+
 
 
 
