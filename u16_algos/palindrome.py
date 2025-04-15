@@ -12,35 +12,27 @@
 
 # write your code here
 
-# word = "MADAM"
+# Given a word
+word = "a b c d e f"
+# print(word)
 
-# if word == word[::-1]:
+# Reverse the word
+# if word.lower() == word[::-1].lower():
 #     print(f"{word} is a palindrome")
+# else:
+#     print(f"{word} is not a palindrome")
 
+#### 
+# newword = ""
+# for letter in word:
+#     newword = letter + newword
 
+# print(newword)
 
-
-
-# word = input("Input a word: ")
-
-# if word.isalpha():
-#     wordlow = word.lower() # note that the original word is not changed.
-
-#     if wordlow == wordlow[::-1]: # use slicing method to reverse
-#         print(f"{word} is a palindrome.")
-#     else:
-#         print(f"{word} is not a palindrome.")
 
 # alternative method to reverse (if cannot use slicing)
 
-# word = "abcdef"
-
-# reversed = ""
-
-# for char in word:
-#     reversed = char + reversed # add the character at beginning of word
-
-# print(f"{reversed} is the reverse of {word}")
+# PALINDROME 
 
 
 ###########################################################
