@@ -152,7 +152,11 @@
 # Scenario: You are entering product codes into a system, and 
 # all codes must be in uppercase letters (e.g., "ABC123").
 
-
+# codes = input("Enter product code: ")
+# if codes.isupper():
+#     print("pass")
+# else:
+#     print("Product code mst be in upper case")
 
 
 
@@ -215,24 +219,43 @@
 # # Input: "PASSWORD123"
 # # Output: "Invalid password: missing lowercase letter"
 
-password = input("Type a password: ")
 
-# setup some flags (boolean value)
-# lengthok = False
-upperok = False
-lowerok = False
-digitok = False
 
-# loop through all the characters in the given password
-for c in password:
-    if c.isupper():
-        upperok = True
-    elif c.islower():
-        lowerok = True
-    elif c.isdigit():
-        digitok = True
 
-if upperok and lowerok and digitok and len(password)>8:
-    print(f"{password} is valid. ")
-else:
-    print(f"{password} is not valid. ")
+
+
+
+while True:
+    password = input("Type a password: ")
+
+    # setup some flags (boolean value)
+    # lengthok = False
+
+    upperok = False
+    lowerok = False
+    digitok = False
+
+    # loop through all the characters in the given password
+    for c in password:
+        if c.isupper():
+            upperok = True
+        elif c.islower():
+            lowerok = True
+        elif c.isdigit():
+            digitok = True
+
+    if not upperok:
+        print("Your password is missing upper case")
+    if not lowerok:
+        print("Your password is missing lower case")
+    if not digitok:
+        print("Your password is missing numbers")
+
+    if upperok and lowerok and digitok and len(password)>8:
+        print(f"{password} is valid. ")
+        break
+    else:
+        print(f"{password} is not valid. ")
+
+
+

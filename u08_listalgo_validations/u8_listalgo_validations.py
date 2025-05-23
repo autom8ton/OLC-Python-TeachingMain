@@ -1,30 +1,30 @@
-fruits = ['apple', 'orange', 'grape'] 
+# fruits = ['apple', 'orange', 'grape'] 
 
-# how to access items from a list
-print(fruits[2])
+# # how to access items from a list
+# print(fruits[2])
 
-# change the value of orange to durian
-fruits[1] = "durian"
-print(fruits)
+# # change the value of orange to durian
+# fruits[1] = "durian"
+# print(fruits)
 
-# add a new fruit to this list watermelon
-fruits.append("watermelon")
-print(fruits)
+# # add a new fruit to this list watermelon
+# fruits.append("watermelon")
+# print(fruits)
 
-fruits.insert(1, "rambutan")
-print(fruits)
+# fruits.insert(1, "rambutan")
+# print(fruits)
 
-# remove grape from the list
-fruits.remove("grape")
-print(fruits)
+# # remove grape from the list
+# fruits.remove("grape")
+# print(fruits)
 
-# remove second position in the list
-del fruits[1]
-print(fruits)
+# # remove second position in the list
+# del fruits[1]
+# print(fruits)
 
-# remove the last value and assign to a variable
-fruits.pop()
-print(fruits)
+# # remove the last value and assign to a variable
+# fruits.pop()
+# print(fruits)
 
 ###################################################
 # Part 1: Learning Exercises
@@ -127,3 +127,47 @@ print(fruits)
 
 
 # #------------------------------------------------------------
+
+
+
+
+
+
+###########################################################
+# Part 3: Challenge Exercises
+
+# Exercise 1
+# Scenario:  Your program is a shopping list program.
+
+# 1. Program will keep asking user to input a shopping list 
+    # again and again until user indicates otherwise (e.g. stop)
+
+# 2. Enhance your program to check if the item already exists in list
+    # if already exists, display a message to say it already exists
+    # if not exist, then add the item to the list
+
+shoplist = [] # initialise the shopping list at the start
+
+print("Welcome to the shopping program.")
+
+# start the main loop
+while True:
+    # ask the user what they want to buy? 
+    item = input("\nWhat would you like to buy? ")
+
+    if item.lower() == "stop": # end the program
+        print("Done with shopping list.")
+        break
+    else:
+        # check if item exists
+        if item not in shoplist:
+            shoplist.append(item)
+        else:
+            print(f"{item} is already in shopping list. ")
+
+###### print out the shopping list
+print("\nThese items are in your shopping list: ")
+
+# print with the numbering
+for i in range(len(shoplist)):
+    print(f"{i+1}. {shoplist[i]}")

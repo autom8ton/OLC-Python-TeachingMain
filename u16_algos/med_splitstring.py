@@ -1,12 +1,66 @@
 # Practice on how to split strings based on delimiter
-s = "Aisha;Benny;Chloe;David;Eva"
+namestrings = "Aisha;Benny;Chloe;David;Eva;John;Laura"
 
-delim = ";"
+delim = ";" # stores the value of the delimiter
 
-slist = []
+# create an empty list
+namelist = []
 
-currentpos = 0
+# create a temp string, this will hold each name temporarily
+tempstring = ""
 
+# loop through each character from the name string
+for c in namestrings:
+
+    # check if this current character is a delimiter
+    if c == delim:
+        # means that this character is the delimiter 
+        namelist.append(tempstring)
+
+        tempstring = "" # erase the previous name
+    else:
+        # this is not a delimiter
+        # builds each name character by character
+        tempstring = tempstring + c 
+        print(tempstring)
+
+# add the last name manually
+namelist.append(tempstring)
+
+# print the list to confirm
+print(namelist)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#### for loop
+
+# names = ['Aisha', 'Benny', 'Chloe', 'David', 'Eva', 'John', 'Laura']
+
+# print(names[2]) # retrieve using index (number)
+
+# names.append("Darius") # add to the list
+# print(names)
+
+# names.remove("Chloe") # remove
+# print(names)
 
 
 # # find the position of the delimiter, if cannot find, returns -1
@@ -64,25 +118,6 @@ currentpos = 0
 # # Print the final list of split parts
 # print(parts)  
 
-
-
-### string slicing
-word = "SINGAPORE"
-
-print(word[0]) # pulls out letter
-
-#[start:stop:step] # 
-
-print(word[3:6])
-
-
-s = "Aisha;Benny;Chloe;David;Eva" # comma seperated value
-
-delim = ";"
-
-wordlist = [] # empty list
-
-currentpos = 0
 
 # while True:
 #     # find the position of the separator/ delimiter ;
@@ -186,8 +221,8 @@ currentpos = delimpos + len(delimiter)
 
 
 
-word = "AISHA,BENNY,CHLONE"
-print(word[6:11])
+# word = "AISHA,BENNY,CHLONE"
+# print(word[6:11])
 
 # palindrome
 

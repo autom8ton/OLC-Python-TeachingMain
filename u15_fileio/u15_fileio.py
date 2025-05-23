@@ -1,40 +1,14 @@
-# # File IO
+# with open("ListOf5LetterWords.txt", "r") as fileobj:
+#     contents = fileobj.read()
 
-# # r = read, w = write, a = append
-# msg = ["hello 224", "how are you 324", "i am fine thank you 424"]
+# print(contents)
 
-# # write a file 
-# fobj = open("test222.txt", "a")
+# use write mode
+with open("sample2.txt", "a") as fileobj:
+    # write a few lines of text into this file
+    fileobj.write("This is my 6 sentence\n")
+    fileobj.write("This is my 7 sentence\n")
+    fileobj.write("This is my 8 sentence\n")
+    fileobj.write("This is my 9 sentence\n")
+    fileobj.write("This is my 10 sentence\n")
 
-# # fobj.write("hello\n")
-# # fobj.write("how are you\n")
-# # fobj.write("i am fine thank you.\n")
-
-# # .writelines() # takes a list as input
-# # fobj.writelines(msg)
-
-# for i in msg:
-#     fobj.write(i + "\n")
-
-# fobj.close() ### IMPORTANT 
-
-# fobj = open("test222.txt", "a")
-# with open("test222.txt", "a") as fobj:
-#     fobj.write("something else \n")
-
-    # do not need close()
-
-####### OPEN A FILE AND RETRIEVE THE CONTENTS
-
-# fobj = open("test222.txt", "r")
-
-# # contents = fobj.read() # reads the entire content of the file into a string
-
-# contentlist = fobj.readlines()
-
-# print(contentlist)
-
-
-
-with open("filename.txt", "r") as fobj:
-    content = fobj.read()
