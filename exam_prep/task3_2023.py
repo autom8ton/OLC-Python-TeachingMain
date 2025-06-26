@@ -1,5 +1,6 @@
 # Answer for Debugging Task 3 Question
 
+# backup for the original buggy code
 # import random
 # questions = 10
 # answer_list = []
@@ -33,36 +34,37 @@
 #     message = "correct answers."
 # print("Your total mark is", total_mark, "and you had", correct, message)
 
-
-
-
-
 import random
-questions = 10
+questions = 10 # temporarily change to 3 first
 answer_list = []
 correct = 0
 incorrect = 0
 total_mark = 0
-for x in range(questions):    #5. removed the -1
-    num1 = random.randint(1, 50)
-    num2 = random.randint(1, 50)
-    answer = num1 + num2       #3. answer not defined
+for x in range(questions):  # 6. no need to -1
+    num1 = random.randint(1, 50)  # temp removal
+    num2 = random.randint(1, 50)  # temp removal
+    answer = num1 + num2 # 3. fixed answer variable not defined
+    print(answer) # temp, will remove later
     print("What is", num1, "+", num2, "?")
-    user_answer = int(input())     #10 converted user_answer from string to integer
-    if user_answer == answer:
-        answer_list = answer_list + ["Correct"]    #1 change wrong quotation signs  #9 brought this whole line out of the if condition
-        if num1 > 25 and num2 > 25:    #8 changed or to and
+    user_answer = input()
+    if int(user_answer) == answer: # 7. convert input() into int
+
+        if num1 > 25 and num2 > 25: #8. should be and condition
             total_mark = total_mark + 2
+            # answer_list = answer_list + ['Correct'] # 1. fixed quotation mark
         else:
             total_mark = total_mark + 1
+        answer_list = answer_list + ['Correct']  # 11. need to add "Correct" regardless of marks
     else:
         answer_list = answer_list + ["Incorrect"]
-list_length = len(answer_list) - 1   #2 remove minus sign      #4 bring the minus 1 out of the len() function
+
+    print(answer_list) 
+list_length = len(answer_list) # - 1 # 2 fixed minus character #4 actually i don't need to -1 here 
 for i in range(list_length):
-    if answer_list[i] == "Correct": #7 changed variable x to i
-        correct = correct + 1    #11 changed from -1 to +1
-if correct  == 1:      #6 changed message to correct
-    message = "answer."
+    if answer_list[i] == "Correct": #10 should be i, not x
+        correct = correct + 1 # 9. fixed wrong minus to increase
+if correct  == 1: # 5. fixed message, should be correct variable
+    message = "correct answer."
 else:
-    message = "answers."
+    message = "correct answers."
 print("Your total mark is", total_mark, "and you had", correct, message)
