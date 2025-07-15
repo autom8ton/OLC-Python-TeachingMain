@@ -53,6 +53,29 @@ def shift(char): #z
 
 # shift('z',1)
 
+# finding the start and end range
+# print(ord('a')) #97
+# print(ord('z')) #122
+
+def shift(char):
+    startrange = ord('a') # 97 # find the start position of lowercase letters in ascii
+    endrange = ord('z') # 122 # find the end position of lowercase letters in ascii
+
+    idx = ord(char) # find the ordinal number (index) of the character
+
+    if idx >= startrange and idx <= endrange:
+
+        # offset to zero and modulus 26 to handle wraparound, then add startrange back
+        shifted_idx = (idx - startrange + 1) % 26 + startrange
+
+        return chr(shifted_idx) # z -> a. a -> b
+    else:
+        # if not lowercase, just return back as per question
+        return char
+    
+print(shift2('y'))
+
+
 '''
 Task 5.2 [7]
 Write a function encrypt() that has the parameters message and 
