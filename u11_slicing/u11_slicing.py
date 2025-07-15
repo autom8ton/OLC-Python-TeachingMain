@@ -284,14 +284,73 @@
 # # if nameoffunction(checknric):
 
 
-students = {"Alice": 85, "Bob": 78, "Charlie": 92, "Diana": 88, "Eve": 76}
-# Task 2: Create a new dictionary with students categorized as "Pass" or "Fail".
-# Assume a passing grade is 80 or above. 
+# students = {"Alice": 85, "Bob": 78, "Charlie": 92, "Diana": 88, "Eve": 76}
+# # Task 2: Create a new dictionary with students categorized as "Pass" or "Fail".
+# # Assume a passing grade is 80 or above. 
 
-{"Alice": "Pass",
- "Bob": "Fail"}
+# {"Alice": "Pass",
+#  "Bob": "Fail"}
 
-result_students = {} # empty dictionary
+# result_students = {} # empty dictionary
 
-for name, score in students.items():
-    if score >= 
+# for name, score in students.items():
+#     if score >= 
+
+
+
+
+
+###########################################################
+# Part 2. IN-CLASS Practice Exercises
+
+# Exercise 7: Extracting Middle Elements from a List
+# Scenario: Extract the middle 3 elements from a list with an odd 
+# number of elements.
+numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+
+# find the middle index of this list
+mid = len(numbers) // 2
+print(mid) # returns the middle index
+
+
+# Exercise 1: Simple List Slicing
+# Write a program to extract the first 3 elements from a list.
+numbers = [10, 20, 30, 40, 50]
+
+print(numbers[0:3])
+
+
+
+
+#------------------------------------------------------------
+
+# Exercise 8: Checking Palindrome in a String
+# Scenario: Determine if a string is a palindrome (reads the same 
+# backward as forward).
+# word = input("Enter a word: ")
+
+
+
+
+
+#------------------------------------------------------------
+
+# Exercise 9: Reversing Words in a Sentence
+# Scenario: Reverse the words in a sentence manually.
+sentence = "Python is fun to learn."
+
+
+
+
+
+
+
+#------------------------------------------------------------
+# Exercise 10: Validating a Substring
+# Scenario: Check if a string contains only alphabets using slicing.
+text = "Hello123"
+
+
+
+
+#------------------------------------------------------------

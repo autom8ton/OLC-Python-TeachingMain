@@ -123,33 +123,54 @@
 
 
 
-# get computer to think of a random number 1 - 100
-import random # random library
-rannum = random.randint(1, 100)
-print(rannum)
+# # get computer to think of a random number 1 - 100
+# import random # random library
+# rannum = random.randint(1, 100)
+# print(rannum)
 
-for i in range(7):
+# for i in range(7):
 
-    # computer ask me to guess
-    guess = int(input("Guess my number (1 - 100): "))
+#     # computer ask me to guess
+#     guess = int(input("Guess my number (1 - 100): "))
 
-    # check if number is more than
-    if guess > rannum:
-        print(f"{guess} is too big. try again.")
+#     # check if number is more than
+#     if guess > rannum:
+#         print(f"{guess} is too big. try again.")
 
-    # check if number is less than
-    elif guess < rannum:
-        print(f"{guess} is too small. try again.")
+#     # check if number is less than
+#     elif guess < rannum:
+#         print(f"{guess} is too small. try again.")
 
-    # check if number is equal to
-    else:
-        print(f"{guess} is correct!")
-        break
+#     # check if number is equal to
+#     else:
+#         print(f"{guess} is correct!")
+#         break
 
-##### code execution - after the loop
-if guess != rannum: #else
-    print("YOu did not guess it.")
-    print(f"The number was {rannum}")
+# ##### code execution - after the loop
+# if guess != rannum: #else
+#     print("YOu did not guess it.")
+#     print(f"The number was {rannum}")
 
 
 ####### i need to repeat this 7 times
+
+
+# boolean values >>> True / False
+# if conditions
+
+# compare 2 numbers
+# import random
+# random.randint(1, 10)
+
+num1 = 50 # single equal, value assignment
+num2 = 20
+
+# > , <, >=, <=, ==
+# print(5 == 5) # value equality
+
+if num1 > num2: # only when this condition is true
+    # run the code inside
+    print(f"{num1} is bigger than {num2}")
+else:
+    print(f"{num1} is not bigger than {num2}")
+
