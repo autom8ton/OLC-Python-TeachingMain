@@ -24,6 +24,8 @@ called decryption to change the ciphertext back to the original message.
 # All code should have appropriate comments and all 
 # identifiers should be appropriately named. [4]
 
+# ord('a')  >> return a number
+# chr(97) >> return a character
 
 '''
 Task 5.1 [4]
@@ -51,13 +53,13 @@ def shift(char): #z
     else:
         return char
 
-# shift('z',1)
+print(shift('c')) # b)
 
 # finding the start and end range
 # print(ord('a')) #97
 # print(ord('z')) #122
 
-def shift(char):
+def shift2(char):
     startrange = ord('a') # 97 # find the start position of lowercase letters in ascii
     endrange = ord('z') # 122 # find the end position of lowercase letters in ascii
 
@@ -73,7 +75,7 @@ def shift(char):
         # if not lowercase, just return back as per question
         return char
     
-print(shift2('y'))
+print(shift2('z'))
 
 
 '''
@@ -90,6 +92,8 @@ should ignore all other characters.
 #-----------------------------------
 # Write and test your code here
 # a a a , 3 > d d d
+# Today is a hot day!
+
 def encrypt(message, positions):
     encrypted = ''
 

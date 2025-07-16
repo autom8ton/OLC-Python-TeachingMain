@@ -1,109 +1,195 @@
 # string, integer, floats, boolean, list, dictionary
+# key and value pair
 
-food = ["hamburger",
-           "pasta",
-           "pizza",
-           "fries",
-           "nuggets"]
+# define a dictionary 
+countries = {"malaysia":"kuala lumpur", "china":"beijing", "indonesia":"jakarta"}
 
-price = [2,
-        15,
-        21,
-        5,
-        6]
+# how to retrieve a value from dictionary
+cap1 = countries["malaysia"]
+print(cap1)
 
-# key/ value
-# key must be unique
-menu = {"hamburger":2,
-        "pasta":15,
-        "pizza":21,
-        "fries":5,
-        "nuggets":6}
+# add to dictionary
+countries["japan"] = "tokyo" # if the key does not exist, it will add it
+print(countries)
 
-###################################################
-# Part 1: Learning Exercises
+# change a value in a dictionary
+countries["japan"] = "osaka" # if the key does exist, it will change the value
+print(countries)
 
-# Practice Exercise 1: Creating a Dictionary
-# Create a dictionary to store student names and their grades.
-students = {"Alice": 85, "Bob": 90, "Charlie": 78}
+# delete a key/ value pair from dictionary
+del countries["malaysia"]
+print(countries)
 
-
-
-
-
-#------------------------------------------------------------
-# Practice Exercise 2: Accessing Dictionary Values
-# Access Bob's grade from the dictionary.
-students = {"Alice": 85, "Bob": 90, "Charlie": 78}
-
-bobgrade = students["Bob"] # pull out a value using the key
-print(bobgrade)
-
-
-
-
-#------------------------------------------------------------
-# Practice Exercise 3: Adding New Key-Value Pairs
-# Add a new student, Diana, with a grade of 92 to the dictionary.
-students = {"Alice": 85, "Bob": 90, "Charlie": 78}
-
-students["Diana"] = 92 # add a new key/ value
-print(students)
-
-# if the key does not exist, then it will add
-# but if key already exist, it will update
-
-
-#------------------------------------------------------------
-# Practice Exercise 4: Updating Existing Values
-# Update Charlie's grade to 80 in the dictionary.
-students = {"Alice": 85, "Bob": 90, "Charlie": 78}
-
-students["Charlie"] = 80
-print(students)
-
-
-
-#------------------------------------------------------------
-# Practice Exercise 5: Deleting Key-Value Pairs
-# Remove Alice's entry from the dictionary.
-students = {"Alice": 85, "Bob": 90, "Charlie": 78}
-
-del(students["Alice"])
-print(students)
-
-
-
-#------------------------------------------------------------
-# Practice Exercise 6: Checking for Existence of a Key
-# Check if 'Diana' is in the student dictionary.
-students = {"Alice": 85, "Bob": 90, "Charlie": 78}
-
-stu = "Bob"
-if stu in students:
-    print(f"{stu} is in the class")
+# check whether a particular key exist in dictionary # existance check
+if "malaysia" in countries:
+    print("malaysia exists")
 else:
-    print(f"{stu} is not in the class")
+    print("malaysia does not exist")
 
+# how to loop through all the key/ value pairs in dictionary
+for country, capital in countries.items():
+    # print(country)
+    # print(capital)
+    print(f"The capital of {country} is {capital}.")
+
+
+#### Code a Restaurant Ordering Program
+
+# Task 1: Create a dictionary containing 3 food items and their prices
+
+# Task 2: Ask customer what they want to eat?
+
+# Task 3: Check if order is available
+            # if available, print the price
+            # else, tell customer not available
+
+
+
+# Challenge: Advanced Grade Analysis
+ 
+# Scenario: A teacher needs detailed analysis of class performance.
+students = {"Alice": 85, "Bob": 78, "Charlie": 92, "Diana": 88, "Eve": 76}
+
+# Task 1: Find and print the names of students who scored below the average grade.
+
+# average >>> add up total / number students
+
+# average
+
+# for student,score in students.items():
+#     if score < average:
+#         print(f"{student} scored less than {average}")
 
 
 #------------------------------------------------------------
-# Practice Exercise 7: Iterating Through a Dictionary
-# Print all student names and their grades.
-students = {"Alice": 85, "Bob": 90, "Charlie": 78}
+# Task 2: Create a new dictionary with students categorized as "Pass" or "Fail".
+# Assume a passing grade is 80 or above.
+# print a message warning students who fail e.g. Bob failed! You need to work harder.
 
-for stu, score in students.items(): # read the values
-    print(f"{stu} scored {students[stu]}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# food = ["hamburger",
+#            "pasta",
+#            "pizza",
+#            "fries",
+#            "nuggets"]
+
+# price = [2,
+#         15,
+#         21,
+#         5,
+#         6]
+
+# # key/ value
+# # key must be unique
+# menu = {"hamburger":2,
+#         "pasta":15,
+#         "pizza":21,
+#         "fries":5,
+#         "nuggets":6}
+
+# ###################################################
+# # Part 1: Learning Exercises
+
+# # Practice Exercise 1: Creating a Dictionary
+# # Create a dictionary to store student names and their grades.
+# students = {"Alice": 85, "Bob": 90, "Charlie": 78}
+
+
+
+
+
+# #------------------------------------------------------------
+# # Practice Exercise 2: Accessing Dictionary Values
+# # Access Bob's grade from the dictionary.
+# students = {"Alice": 85, "Bob": 90, "Charlie": 78}
+
+# bobgrade = students["Bob"] # pull out a value using the key
+# print(bobgrade)
+
+
+
+
+# #------------------------------------------------------------
+# # Practice Exercise 3: Adding New Key-Value Pairs
+# # Add a new student, Diana, with a grade of 92 to the dictionary.
+# students = {"Alice": 85, "Bob": 90, "Charlie": 78}
+
+# students["Diana"] = 92 # add a new key/ value
+# print(students)
+
+# # if the key does not exist, then it will add
+# # but if key already exist, it will update
+
+
+# #------------------------------------------------------------
+# # Practice Exercise 4: Updating Existing Values
+# # Update Charlie's grade to 80 in the dictionary.
+# students = {"Alice": 85, "Bob": 90, "Charlie": 78}
+
+# students["Charlie"] = 80
+# print(students)
+
+
+
+# #------------------------------------------------------------
+# # Practice Exercise 5: Deleting Key-Value Pairs
+# # Remove Alice's entry from the dictionary.
+# students = {"Alice": 85, "Bob": 90, "Charlie": 78}
+
+# del(students["Alice"])
+# print(students)
+
+
+
+# #------------------------------------------------------------
+# # Practice Exercise 6: Checking for Existence of a Key
+# # Check if 'Diana' is in the student dictionary.
+# students = {"Alice": 85, "Bob": 90, "Charlie": 78}
+
+# stu = "Bob"
+# if stu in students:
+#     print(f"{stu} is in the class")
+# else:
+#     print(f"{stu} is not in the class")
+
+
+
+# #------------------------------------------------------------
+# # Practice Exercise 7: Iterating Through a Dictionary
+# # Print all student names and their grades.
+# students = {"Alice": 85, "Bob": 90, "Charlie": 78}
+
+# for stu, score in students.items(): # read the values
+#     print(f"{stu} scored {students[stu]}")
     
 
-######
-for stu in students: # stu is the key
-    # print(stu) # key
-    # print(students[stu]) # value from dictionary using key
+# ######
+# for stu in students: # stu is the key
+#     # print(stu) # key
+#     # print(students[stu]) # value from dictionary using key
 
-    # print(f"{stu} scored {students[stu]}")
-    students[stu] = students[stu] - 10
-print(students)
+#     # print(f"{stu} scored {students[stu]}")
+#     students[stu] = students[stu] - 10
+# print(students)
 
 
 
