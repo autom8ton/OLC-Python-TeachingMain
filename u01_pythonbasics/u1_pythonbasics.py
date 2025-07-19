@@ -78,3 +78,7 @@ print(c)
 # print("*" * 3 )
 # print("*" * 4 )
 # print("*" * 5 )
+
+print(f"{"#"*30:^30}")
+print(f"{'#'}{"WELCOME TO WORDLE":^28}{'#'}")
+print(f"{"#"*30:^30}")
