@@ -104,26 +104,34 @@ def is_valid_float(s):
     except ValueError:
         return False
     
-while True:
-    inputnum = float(input("Input a number for conversion: "))
-    if inputnum > 0 :
-        break
-    else:
-        print("Invalid number, must be a number more than 0")
-
-while True:
-    from_unit = input("What is the source unit? ")
-    if is_valid_unit(from_unit):
-
-        to_unit = input("What is the target unit? ")
-        if is_valid_unit(to_unit):
-            outputNum = convert_storage(inputnum, from_unit, to_unit)
-            outputNum = round(outputNum, 4)
-            print(f"{inputnum} {from_unit} is approximately {outputNum}{to_unit}.")
+while True: 
+    while True:
+        inputnum = float(input("Input a number for conversion: "))
+        if inputnum > 0 :
+            break
         else:
-            print("Invalid target unit. Try again")
-    else:
-        print("Invalid source unit. Try again")
+            print("Invalid number, must be a number more than 0")
+
+    while True:
+        from_unit = input("What is the source unit? ")
+        if is_valid_unit(from_unit):
+
+            to_unit = input("What is the target unit? ")
+            if is_valid_unit(to_unit):
+                outputNum = convert_storage(inputnum, from_unit, to_unit)
+                outputNum = round(outputNum, 4)
+                print(f"{inputnum} {from_unit} is approximately {outputNum}{to_unit}.")
+                break
+            else:
+                print("Invalid target unit. Try again")
+        else:
+            print("Invalid source unit. Try again")
+    
+    proceed = input("Do you want to do another conversion? Y/ N").lower()
+    
+    if proceed == "n":
+        print("ok bye.")
+        break
 
 # ________________________________________
 # Task 4.5 – Code Quality [4 marks]
