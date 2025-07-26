@@ -93,10 +93,19 @@
 # 2222
 # 11111
 
-# counter algorithm 
-count = 1
+# # counter algorithm 
+# count = 1
 
-for i in range(5, 0, -1):  
-    print(str(i) * count) 
-    count = count + 1 ### same as change (count) by 1
+# for i in range(5, 0, -1):  
+#     print(str(i) * count) 
+#     count = count + 1 ### same as change (count) by 1
     
+# using for loops
+
+# print numbers from 0 - 9
+
+# print numbers from 1 to 15
+
+# print even numbers from 2 to 24
+
+# print numbers from 10 to 1
