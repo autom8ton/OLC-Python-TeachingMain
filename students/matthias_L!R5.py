@@ -1,26 +1,3 @@
-# Subjects = ["English", "Chinese", "E math", "A math", "Chemistry", "physics", "Biology", "Geography", "History", "Literature", "Social Studies",
-#             "Computing", "Art", "Music", "FCE"]
-
-# subject_taken = input("Enter the subjects taken and separate each subject with commas: ").split(",")
-# subject_grades = input("Enter the grades for the subjects and separate each grade with commas: ").split(",")
-# #for sub, grade in (subject_taken, subject_grades):
-# #  print(f"subject: {sub}, grade: {grade}")
-# t = {}
-# for i in range(len(subject_taken)):
-#   t[subject_taken[i]] = subject_grades[i]
-# print(t)
-# Subjects = ["English", "Chinese", "E math", "A math", "Chemistry", "physics", "Biology", "Geography", "History", "Literature", "Social Studies",
-#             "Computing", "Art", "Music", "FCE"]
-
-
-
-# subject_taken = input("Enter the subjects taken and separate each subject with commas: ").split(",")
-# subject_grades = input("Enter the grades for the subjects and separate each grade with commas: ").split(",")
-# t = {}
-# for i in range(len(subject_taken)):
-#   t[subject_taken[i]] = subject_grades[i]
-# print(t)
-
 # Store the R5 - related subjects in 1 list (for validation)
 r5subs = ["E MATH","A MATH", "CHEMISTRY","PHYSICS", "BIOLOGY", "GEOGRAPHY", "HISTORY",
           "LITERATURE","SOCIAL STUDIES", "COMPUTING", "ART", "MUSIC", "FCE"]
@@ -115,10 +92,35 @@ def selectbest(subjectscore, grades, requiredCount):
 l1selected = selectbest(l1subject_score, grades, 1)
 r5selected = selectbest(r5subject_score, grades, 5)
 
+print("*"*30) # formatting to make nice
 print("Your L1R5 is: ")
 for subject, score in l1selected.items():
   print(f"{subject} : {score}")
 for subject,score in r5selected.items():
   print(f"{subject} : {score}")
+print("*"*30) # formatting to make nice
 
 
+############### Matthias Original
+# Subjects = ["English", "Chinese", "E math", "A math", "Chemistry", "physics", "Biology", "Geography", "History", "Literature", "Social Studies",
+#             "Computing", "Art", "Music", "FCE"]
+
+# subject_taken = input("Enter the subjects taken and separate each subject with commas: ").split(",")
+# subject_grades = input("Enter the grades for the subjects and separate each grade with commas: ").split(",")
+# #for sub, grade in (subject_taken, subject_grades):
+# #  print(f"subject: {sub}, grade: {grade}")
+# t = {}
+# for i in range(len(subject_taken)):
+#   t[subject_taken[i]] = subject_grades[i]
+# print(t)
+# Subjects = ["English", "Chinese", "E math", "A math", "Chemistry", "physics", "Biology", "Geography", "History", "Literature", "Social Studies",
+#             "Computing", "Art", "Music", "FCE"]
+
+
+
+# subject_taken = input("Enter the subjects taken and separate each subject with commas: ").split(",")
+# subject_grades = input("Enter the grades for the subjects and separate each grade with commas: ").split(",")
+# t = {}
+# for i in range(len(subject_taken)):
+#   t[subject_taken[i]] = subject_grades[i]
+# print(t)
