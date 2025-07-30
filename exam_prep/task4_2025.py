@@ -40,6 +40,8 @@ by one position (a → b ... → y → z → a) and do nothing to other characte
 # Write and test your code here
 def shift(char): #z
     # or use chr()/ ord() for ascii, but this way easier.
+
+    # string to hold all the alphabets, we can use the index to find position
     alphas = 'abcdefghijklmnopqrstuvwxyz' 
 
     # check if char is lower case or in alphas string
@@ -53,13 +55,17 @@ def shift(char): #z
     else:
         return char
 
-print(shift('c')) # b)
+print(shift('z')) # b)
 
 # finding the start and end range
 # print(ord('a')) #97
 # print(ord('z')) #122
 
+# ord('A') # 97 (give a letter, returns a number)
+# chr(97) ## a (give a number, they return the letter)
+
 def shift2(char):
+
     startrange = ord('a') # 97 # find the start position of lowercase letters in ascii
     endrange = ord('z') # 122 # find the end position of lowercase letters in ascii
 
@@ -75,7 +81,7 @@ def shift2(char):
         # if not lowercase, just return back as per question
         return char
     
-print(shift2('z'))
+print(shift2('c'))
 
 
 '''
@@ -109,7 +115,7 @@ def encrypt(message, positions):
 
     return encrypted
 
-print(encrypt("aaa", 1))
+print(encrypt("This is the seCret me55age!", 5))
 
 '''
 Task 5.3 [2]

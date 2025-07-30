@@ -1,3 +1,26 @@
+
+# for i in range(10): #0,1,2,3,4,5,6,7,8,9
+#     print(i)
+
+# for i in "SINGAPORE": # S I N G A P O R E
+#     print(i)
+
+# option 1: range(stop)
+# range(10) # 0,1,2,3,4,5,6,7,8,9
+
+# for i in range(10): # 0
+#     print(i)
+
+# # option 2: range(start, stop)
+# range(5, 11) # 1 - 10
+
+# # option 3: range(start, stop, step)
+# range(2, 25, 2)
+# range(3, 37, 3)
+
+# range(10, 0, -1)
+
+
 # for loop is like the repeat loop in scratch
 
 # range(10), string, list, dictionary
