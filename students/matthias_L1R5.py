@@ -30,6 +30,11 @@ while True:
   print("Enter at least 1 L1 Subject")
   print(f"L1 Subject Count: {l1count}\n")
   l1subject = validate("Enter a L1 Language Subject: ", l1subs)
+  # l1subject = input("Enter a L1 Language Subject: ")
+  # if l1subject not in l1subs:
+  #   print("You must enter a valid subject")
+  # else:
+
 
   ### need to do validation for the inputs above
   if l1subject not in l1subject_score:
@@ -124,3 +129,23 @@ print("*"*30) # formatting to make nice
 # for i in range(len(subject_taken)):
 #   t[subject_taken[i]] = subject_grades[i]
 # print(t)
+
+
+# Subjects = ["E MATH","A MATH", "CHEMISTRY","PHYSICS", "BIOLOGY", "GEOGRAPHY", "HISTORY",
+#           "LITERATURE","SOCIAL STUDIES", "COMPUTING", "ART", "MUSIC", "FCE"]
+
+# subject_taken = input("Enter the subjects you want to use for your L1R5 and separate each subject with commas: ").split(",")
+# subject_grades = input("Enter the grades for the subjects and separate each grade with commas: ").split(",")
+
+# subject_score = {}
+
+# for i in range(len(subject_taken)):
+    
+#     # adding to dictionary
+#     # t[subject_taken[i]] = subject_grades[i]
+
+# # print(t)
+# # g=0
+# # for i in subject_grades:
+# #   g += int(i)
+# # print(f"Your L1R5 is {g}")
