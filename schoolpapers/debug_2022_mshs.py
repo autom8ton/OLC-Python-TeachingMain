@@ -1,4 +1,55 @@
 word = input("Please enter your word: ")
+word = word.lower() # islower() # 3. should be lower() not .islower()
+begin_p = word.startswith("p") # 4. no function called beginswith
+end_h = word.endswith("h")
+contain_e = word.find("e") # 5. need to .find()
+word_length = len(word) # .length() #6. use len()
+if not begin_p and not end_h and contain_e == -1: #1.  missing ==
+    if word_length <= 3: # 8 . should be <=
+        print("The length of the word is short.")
+    elif word_length <= 10: # 9 . should be word_length, not word
+        print("The length of the word is medium.")
+    else: #elif: # 2. should be else
+        print("The length of the word is long.")
+if begin_p:
+    print("Invalid. You entered a word that begins with 'p'.")
+elif end_h:
+    print("Invalid. You entered a word that ends with 'h'.")
+elif contain_e != -1: #10. not contain_e:
+    print("Invalid. You entered a word that contains 'e'.") #7. should be e not a
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+word = input("Please enter your word: ")
 word = word.lower() #word.islower() # 3.  should be word.lower()
 begin_p = word.startswith("p")# 4. word.beginswith("p") # 4. startswith
 end_h = word.endswith("h")
@@ -18,3 +69,4 @@ elif end_h:
     print("Invalid. You entered a word that ends with 'h'.")
 elif contain_e != -1: #7 elif not contain_e: # contain_e will return -1
     print("Invalid. You entered a word that contains 'e'.") # 8. should be e
+'''

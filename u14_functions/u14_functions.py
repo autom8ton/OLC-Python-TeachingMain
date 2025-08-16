@@ -62,22 +62,30 @@
 # # print("The area of the rectangle is {}".format(area))
 
 
-# def area_triangle(base, height):
-#     area = 0.5 * base * height
+def area_triangle(base, height):
+    area = 0.5 * base * height
+
+    list1 = [1,2,3]
+    list2 = [5,6,7]
     
-#     return area
-#     # print(f"The area of triangle of base {base} and height {height} is {area} ")
+    return list1, list2
+    # print(area)
+    # print(f"The area of triangle of base {base} and height {height} is {area} ")
 
-# # area1 = area_triangle(10, 89)
-# # area2 = area_triangle(45, 546457)
-# # area3 = area_triangle(2342357, 8709789)
-# # area4 = area_triangle(456478694, 2145)
-# # area5 = area_triangle(234, 342354)
-# # area6 = area_triangle(78674, 898659)
-# # area7 = area_triangle(568578, 8342353453469)
+var1, var2 = area_triangle(10,10)
+print(var1)
+print(var2)
 
-# # total = area1 + area2 + area3 + area4 + area5 + area6 + area7 
-# # print(f"The total area is {total}")
+# area1 = area_triangle(10, 89)
+# area2 = area_triangle(45, 546457)
+# area3 = area_triangle(2342357, 8709789)
+# area4 = area_triangle(456478694, 2145)
+# area5 = area_triangle(234, 342354)
+# area6 = area_triangle(78674, 898659)
+# area7 = area_triangle(568578, 8342353453469)
+
+# total = area1 + area2 + area3 + area4 + area5 + area6 + area7 
+# print(f"The total area is {total}")
 
 
 # list1 = [2944, 5490, 2357, 2619, 1177, 451, 8299, 2533, 4682, 6040,

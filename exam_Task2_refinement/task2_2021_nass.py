@@ -22,18 +22,19 @@
 # Edit the program so that the new topping is available for selection and recalculate the cost.
 # Cost is rounded to 1 decimal place.
 ##########################################################
-toppings = ['ham', 'cheese', 'lettuce', 'tomatoes','capsicum']
-top_cost = [1, 0.8, 0.5, 0.5, 0.8]
-print("Welcome to All-Health Salad Bar!")
-print("Please select your toppings below.")
-ham = int(input("Quantity of ham: "))
-cheese = int(input("Quantity of cheese: "))
-lettuce = int(input("Quantity of lettuce: "))
-tomatoes = int(input("Quantity of tomatoes: "))
-capsicums = int(input("Quantity of capsicum: "))
-total_cost = ham*top_cost[0] + cheese*top_cost[1] + lettuce*top_cost[2] + tomatoes*top_cost[3] + capsicums*top_cost[4]
-# print("Total cost: $", round(total_cost, 2))
-print(f"Total cost: ${total_cost:.2f}")
+# toppings = ['ham', 'cheese', 'lettuce', 'tomatoes','capsicum']
+# top_cost = [1, 0.8, 0.5, 0.5, 0.8]
+# print("Welcome to All-Health Salad Bar!")
+# print("Please select your toppings below.")
+# ham = int(input("Quantity of ham: "))
+# cheese = int(input("Quantity of cheese: "))
+# lettuce = int(input("Quantity of lettuce: "))
+# tomatoes = int(input("Quantity of tomatoes: "))
+# capsicums = int(input("Quantity of capsicum: "))
+
+# total_cost = ham*top_cost[0] + cheese*top_cost[1] + lettuce*top_cost[2] + tomatoes*top_cost[3] + capsicums*top_cost[4]
+# # print("Total cost: $", round(total_cost, 1))
+# print(f"Total cost: ${total_cost:.2f}")
 
 
 ##########################################################
@@ -47,27 +48,27 @@ print(f"Total cost: ${total_cost:.2f}")
 # Use appropriate input and output messages.
 ##########################################################
 
-toppings = ['ham', 'cheese', 'lettuce', 'tomatoes','capsicum']
-top_cost = [1, 0.8, 0.5, 0.5, 0.8]
-print("Welcome to All-Health Salad Bar!")
+# toppings = ['ham', 'cheese', 'lettuce', 'tomatoes','capsicum']
+# top_cost = [1, 0.8, 0.5, 0.5, 0.8]
+# print("Welcome to All-Health Salad Bar!")
 
-while True:
-    print("Please select your toppings below.")
-    ham = int(input("Quantity of ham: "))
-    cheese = int(input("Quantity of cheese: "))
-    lettuce = int(input("Quantity of lettuce: "))
-    tomatoes = int(input("Quantity of tomatoes: "))
-    capsicums = int(input("Quantity of capsicum: "))
-    total_cost = ham*top_cost[0] + cheese*top_cost[1] + lettuce*top_cost[2] + tomatoes*top_cost[3] + capsicums*top_cost[4]
-    # print("Total cost: $", round(total_cost, 2))
-    print(f"Total cost: ${total_cost:.2f}")
+# while True:
+#     print("Please select your toppings below.")
+#     ham = int(input("Quantity of ham: "))
+#     cheese = int(input("Quantity of cheese: "))
+#     lettuce = int(input("Quantity of lettuce: "))
+#     tomatoes = int(input("Quantity of tomatoes: "))
+#     capsicums = int(input("Quantity of capsicum: "))
+#     total_cost = ham*top_cost[0] + cheese*top_cost[1] + lettuce*top_cost[2] + tomatoes*top_cost[3] + capsicums*top_cost[4]
+#     # print("Total cost: $", round(total_cost, 2))
+#     print(f"Total cost: ${total_cost:.2f}")
 
-    if total_cost < 5:
-        print("Your minimum order must be at least $5.00")
-        print("Please re-enter your order again.")
-    else:
-        print("Thank you for ordering!")
-        break
+#     if total_cost < 5:
+#         print("Your minimum order must be at least $5.00")
+#         print("Please re-enter your order again.")
+#     else:
+#         print("Thank you for ordering!")
+#         break
 
 
 ##########################################################
@@ -80,30 +81,30 @@ while True:
 # Your program should inform the user with the following message: 
 # “You are entitled to a free drink.”
 ##########################################################
-toppings = ['ham', 'cheese', 'lettuce', 'tomatoes','capsicum']
-top_cost = [1, 0.8, 0.5, 0.5, 0.8]
-print("Welcome to All-Health Salad Bar!")
+# toppings = ['ham', 'cheese', 'lettuce', 'tomatoes','capsicum']
+# top_cost = [1, 0.8, 0.5, 0.5, 0.8]
+# print("Welcome to All-Health Salad Bar!")
 
-while True:
-    print("Please select your toppings below.")
-    ham = int(input("Quantity of ham: "))
-    cheese = int(input("Quantity of cheese: "))
-    lettuce = int(input("Quantity of lettuce: "))
-    tomatoes = int(input("Quantity of tomatoes: "))
-    capsicums = int(input("Quantity of capsicum: "))
-    total_cost = ham*top_cost[0] + cheese*top_cost[1] + lettuce*top_cost[2] + tomatoes*top_cost[3] + capsicums*top_cost[4]
-    # print("Total cost: $", round(total_cost, 2))
-    print(f"Total cost: ${total_cost:.2f}")
+# while True:
+#     print("Please select your toppings below.")
+#     ham = int(input("Quantity of ham: "))
+#     cheese = int(input("Quantity of cheese: "))
+#     lettuce = int(input("Quantity of lettuce: "))
+#     tomatoes = int(input("Quantity of tomatoes: "))
+#     capsicums = int(input("Quantity of capsicum: "))
+#     total_cost = ham*top_cost[0] + cheese*top_cost[1] + lettuce*top_cost[2] + tomatoes*top_cost[3] + capsicums*top_cost[4]
+#     # print("Total cost: $", round(total_cost, 2))
+#     print(f"Total cost: ${total_cost:.2f}")
 
-    if total_cost < 5:
-        print("Your minimum order must be at least $5.00")
-        print("Please re-enter your order again.")
-    else:
-        print("Thank you for ordering!")
+#     if total_cost < 5:
+#         print("Your minimum order must be at least $5.00")
+#         print("Please re-enter your order again.")
+#     else:
+#         print("Thank you for ordering!")
 
-        if total_cost > 8:
-            print("You are entitled to a free drink.")
-        break
+#         if total_cost > 8:
+#             print("You are entitled to a free drink.")
+#         break
 
 
 

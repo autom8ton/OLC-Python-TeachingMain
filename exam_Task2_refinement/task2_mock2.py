@@ -13,12 +13,12 @@
 
 #################################
 # # Task 2.1 
-# firstname = input("Please enter your first name: ").lower()
-# lastname = input("Please enter your last name: ").lower()
-# #  first letter of the first name last three characters of the last name. 
-# # email_id = firstname[:3] + lastname + "@example.com"
-# email_id = firstname[0] + lastname[-3:] + "@example.com"
-# print("Your email ID is " + email_id)
+firstname = input("Please enter your first name: ").lower()
+lastname = input("Please enter your last name: ").lower()
+#  first letter of the first name last three characters of the last name. 
+# email_id = firstname[:3] + lastname + "@example.com"
+email_id = firstname[0] + lastname[-3:] + "@example.com"
+print("Your email ID is " + email_id)
 
 # word = "SINGAPORE"
 # print(word[0:-3]) # [start: stop: step]
@@ -42,29 +42,18 @@
 # email_id = "jick@example.com"
 # print(email_id.find("!"))
 
-
-# while True:
-#     checkemail = input("Enter your email id again to confirm: ")
-#     # if find returns -1, means cannot find.
-#     check1 = True
-#     check2 = True
-#     check3 = True
-
-#     #abc@email.com
-#     if "@" not in checkemail:
-#     # if checkemail.find("@") == -1:
-#         print("Symbol '@' missing from email. ")
-#         check1 = False
-
-#     if checkemail.find(".") == -1:
-#         print("Symbol '.' missing from email. ")
-
-#     if checkemail != email_id:
-#         print(f"Input email {checkemail} does not match generated email {email_id}")
-
-#     if check1 and check2 and check3:
-#         print(f"Email {checkemail} is valid.")
-#         break
+while True:
+    checkemail = input("Enter your email id again to confirm: ")
+    # if find returns -1, means cannot find.
+    if checkemail.find("@") == -1:
+        print("Symbol '@' missing from email. ")
+    elif checkemail.find(".") == -1:
+        print("Symbol '.' missing from email. ")
+    elif checkemail != email_id:
+        print(f"Input email {checkemail} does not match generated email {email_id}")
+    else:
+        print(f"Email {checkemail} is valid.")
+        break
 
 # Task 2.3 [5 marks]
 
@@ -124,3 +113,5 @@ for c in listpw:
 ### End optional ################
 
 print(f"Your password is {password}")
+
+
