@@ -50,10 +50,10 @@
 
 # .write(), .read(), .readlines(), .writelines()
 
-planetslist = ["mercury\n", "venus\n","earth\n", "mars\n", 
-               "jupiter\n", "saturn\n", "uranus\n"]
-with open("planets.txt", "w") as fobj:
-    fobj.writelines(planetslist)
+# planetslist = ["mercury\n", "venus\n","earth\n", "mars\n", 
+#                "jupiter\n", "saturn\n", "uranus\n"]
+# with open("planets.txt", "w") as fobj:
+#     fobj.writelines(planetslist)
 
 
 
@@ -98,8 +98,28 @@ with open("planets.txt", "w") as fobj:
 
 # The data is stored in a global dictionary with the identifier data_stored. 
 
-data_stored = {} # empty dictionary
+# data_stored = {} # empty dictionary
 
 # read the shapes.txt store it as a list
 
 # read the colours.txt store it as a list
+
+
+##### 
+# # open the file for reading or writing.
+with open('filename.txt','r') as fileobj:
+    # read the contents of the file
+    content  = fileobj.read()
+
+# print(content)
+
+###### save data/ write to a file
+sentence = "\nLast Saturday was National Day"
+
+with open('newfile.txt', 'a') as fileobj:
+        fileobj.write(sentence)
+
+    # .readlines()
+    # .writelines()
+
+
