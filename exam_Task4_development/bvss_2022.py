@@ -54,7 +54,7 @@ while True:
     while True:
         score = input(f"Enter the score for {name}: ")
         if score.isdigit():
-            score = int(score)
+            score = int(score) # convert here so we can validate for number first
             if score >= 0 and score <= 100:
                 break
             else:
