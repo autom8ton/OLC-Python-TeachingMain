@@ -1,24 +1,26 @@
 
-# caesar encryption - 
-letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+# # caesar encryption - 
+# letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-# "ADVANCE" - DGYDQFH - ADVANCE # KEY = 3
+# # "ADVANCE" - DGYDQFH - ADVANCE # KEY = 3
 
-letter = "J"
-key = 3
+# letter = "J"
+# key = 3
 
-# find the index of F in the alphabet
-index = letters.find(letter)
-# print(index)
+# # find the index of F in the alphabet
+# index = letters.find(letter)
+# # print(index)
 
-# shift by 3 letters
-newindex = index + 3 
+# # shift by 3 letters
+# newindex = index + 3 
 
-# find the corresponding encrypted letter
-encrypted_char = letters[newindex]
+# # find the corresponding encrypted letter
+# encrypted_char = letters[newindex]
 
-print(encrypted_char)
+# print(encrypted_char)
 
+for num in range(7,5):
+    print(num)
 
 # ###################################################
 # # Part 1: Learning Exercises

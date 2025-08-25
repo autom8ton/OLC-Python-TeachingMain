@@ -25,18 +25,11 @@
 #     queue.insert(i,person)
 # print(queue)
 
-# queue = ["Person1", "Person2", "Person3", "Person4", "Person5"]
-# rotate = int(input("How many times to rotate? : "))
+queue = ["Person1", "Person2", "Person3", "Person4", "Person5"]
+rotate = int(input("How many times to rotate? : "))
 
-# for i in range(rotate):
-#     first_person = queue.pop(0)   # remove first person
-#     queue.append(first_person)    # add them to the back
+for i in range(rotate):
+    first_person = queue.pop(0)   # remove first person
+    queue.append(first_person)    # add them to the back
 
-# print(queue)
-number = float(input("Enter a number: "))
-i = 0
-total = 1
-while i < number:
-    i += 1
-    total = total * i 
-print(total)
+print(queue)
