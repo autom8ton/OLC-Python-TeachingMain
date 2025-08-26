@@ -10,7 +10,6 @@
 # Return the valid binary number. [3]  
 
 # Sample executions: 
-# >>> print(enter_data())
 # Enter a binary data packet: 0020110  
 # Data packet should consists of only '0's or '1's.  
 # Enter a binary data packet: #bn0110  
@@ -32,10 +31,10 @@ def enter_data():
                 break
         
         if validbin:
-            # print(testbin)
             return testbin
 
-# enter_data()
+# validbin = enter_data()
+# print(validbin)
 
 
 # Task 4.2 [3] 
@@ -58,10 +57,10 @@ def count_ones(d):
         if char == "1":
             count1 += 1
 
-    # print(count1)
     return count1
 
-# count_ones('0011101')
+countof1 = count_ones('00000000')
+print(countof1)
 
 ############
 # Task 4.3 [4] 
@@ -107,7 +106,13 @@ def add_bit(d, oddeven):
     # print(d)
     return d
 
-add_bit('0011101','odd') 
-add_bit('0011101','even')
-add_bit('0000000','odd')
-add_bit('0000000','even') 
+print(add_bit('0011101','odd') )
+print(add_bit('0011101','even'))
+print(add_bit('0000000','odd'))
+print(add_bit('0000000','even') )
+
+
+# Task 4.4 [3]
+# Use the count_ones(d) function to write a function check_parity(d, oddeven)
+# which returns True or False based on the oddeven argument
+and the 
