@@ -1,4 +1,4 @@
-# Task 4.1 [3] 
+# Task 4.1 enter_data()  [3] 
 
 # Save your program as ENTERDATA_class>_<index number>_<your name>.py  
 # In the same program, write a function enter_data() 
@@ -37,7 +37,7 @@ def enter_data():
 # print(validbin)
 
 
-# Task 4.2 [3] 
+# Task 4.2 count_ones(d) [3] 
 
 # In the next code cell, write a function count_ones(d), 
 # which counts the number of '1's in the d argument. 
@@ -63,7 +63,7 @@ countof1 = count_ones('00000000')
 print(countof1)
 
 ############
-# Task 4.3 [4] 
+# Task 4.3 add_bit(d,oddeven) [4] 
 
 # In the next code cell.
 # Use the count_ones(d) function to write a 
@@ -112,7 +112,7 @@ print(add_bit('0000000','odd'))
 print(add_bit('0000000','even') )
 
 
-# Task 4.4 [3]
-# Use the count_ones(d) function to write a function check_parity(d, oddeven)
-# which returns True or False based on the oddeven argument
-and the 
+# Task 4.4 check_parity(d,oddeven)[3]
+# Use the count_ones(d) function to write a function 
+# check_parity(d,oddeven), which returns True or False 
+# based on the oddeven argument and the number of '1's in the d argument:
