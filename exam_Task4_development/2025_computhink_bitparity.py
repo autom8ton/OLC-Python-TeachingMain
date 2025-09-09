@@ -158,8 +158,10 @@ def validate_parity(binary_str, parity_type):
 # All variables must be appropriately named, and suitable comments 
 # must be inserted to explain the algorithm. [4 marks]
 
+# prompt for the mode before the loop. just need to do it once.
+parity_mode = validate_parity_mode()
+
 while True:
-    parity_mode = validate_parity_mode()
 
     binstring = get_valid_binary_string()
 
