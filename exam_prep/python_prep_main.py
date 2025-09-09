@@ -163,7 +163,7 @@
 
 # Exercise 15: Date Validation
 # Keep asking until user enters a date in format MM-YYYY.
-# Ensure the date is between 01-1900 and 09-2025.
+# Ensure the date is between 01-1900 and 12-2025.
 
 
 
@@ -475,7 +475,6 @@
 # ----------------------------------------------------------------
 
 # Exercise 39: Reuse Function with List
-# Reuse your add(x, y) function.
 # Write a program that accepts a list of numbers and calculates total sum.
 # Example call: [5, 10, 15, 20]
 # Expected Output:
