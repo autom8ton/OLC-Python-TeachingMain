@@ -30,6 +30,16 @@ WEIGHTS = [2, 7, 6, 5, 4, 3, 2]
 # -The middle 7 characters are digits.
 # The function should only return the NRIC string (in uppercase) once all the checks have passed.
 
+def get_valid_nric():
+    while True:
+    # code to get and check valid nric
+
+    # once check pass, return the valid nric.
+    pass
+
+nric = get_valid_nric()
+
+
 
 
 
@@ -130,18 +140,25 @@ WEIGHTS = [2, 7, 6, 5, 4, 3, 2]
 
 
 def get_valid_nric():
+
     while True:
         nric = input("Enter an NRIC: ").upper()
-        if len(nric) != 9:
+
+        if len(nric) != 9: # check for length
             print(f"NRIC must be exactly 9 characters long. Your input [{nric}]")
-        elif nric[0] not in "STFG":
+
+        elif nric[0] not in "STFG": # check first letter is S,T,F,G
             print(f"NRIC must start with S, T, F or G. Your input [{nric}]")
-        elif not nric[-1].isalpha():
+
+        elif not nric[-1].isalpha(): # check last letter is alphabet
             print(f"NRIC must end with an alphabet. Your input [{nric}]")
-        elif not nric[1:8].isdigit():
+
+        elif not nric[1:8].isdigit(): # check middle 7 are numbers
             print(f"NRIC must have 7 digits. Your input [{nric}]")
+            
         else:
-            print(f"NRIC is Valid. Your input [{nric}]")
+            # if code gets here, the above checks have passed.
+            print(f"NRIC {nric} format is correct.")
             return nric
 
 # ________________________________________
