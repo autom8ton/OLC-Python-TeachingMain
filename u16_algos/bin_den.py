@@ -1,17 +1,3 @@
-
-# Exercise 0: Modulus and Floor Division
-# Write a program to calculate the modulus and floor division
-# of two numbers. Example: 17 divided by 5.
-# num1 = 17
-# num2 = 5
-# modulus = num1 % num2
-# floor_div = num1 // num2
-# print("17 % 5 is:", modulus)
-# print("17 // 5 is:", floor_div)
-
-# print(157//2) # floor divide to find the quotient
-# print(157%2) # modulus to find the remainder
-
 #------------------------------------------------------------
 # For Loops through List
 #------------------------------------------------------------
@@ -23,19 +9,6 @@
 # I like to eat apple.
 # I like to eat banana.
 # I like to eat cherry.
-
-# for loop
-# range(10)
-# range(1, 10)
-# range(1, 11, 1)
-# list [1,2,3,4]
-# string "SINGAPORE"
-# dictionary
-
-fruits = ["apple", "banana", "cherry"]
-
-for i in fruits:
-    print(i)
 
 
 
@@ -50,15 +23,9 @@ for i in fruits:
 # Fruit 3: cherry
 fruits = ["apple", "banana", "cherry"]
 
-# print(fruits[0]) # apple
-# print(fruits[1]) # banana
-# print(fruits[2]) # cherry
 
-len(fruits) # return the count of how many items are in the list
 
-# loop through a list using the index
-for i in range(len(fruits)):
-    print(fruits[i])
+
 
 
 
@@ -83,25 +50,11 @@ for i in range(len(fruits)):
 # Expected Output:
 # {"Ali": 55, "Bala": 80, "Cindy": 62}
 
-students = ["Ali", "Bala", "Cindy"]
-marks = [55, 80, 62]
 
-student_marks = {} # declare a empty dictionary
 
-student_marks["John"] = 56
-## add a key/ value manually 
-# add to dictionary is dictionary[key] = value
-print(student_marks)
 
-# access items from both list using the index
-for i in range(len(students)):
-    current_student = students[i] # pulls out the current student e.g. Ali
-    current_mark = marks[i] # pulls out the current mark e.g. 55
 
-    student_marks[current_student] = current_mark
-    ### ???
 
-# print(student_marks)
 #------------------------------------------------------------
 # While Loop Validation
 #------------------------------------------------------------
@@ -109,12 +62,6 @@ for i in range(len(students)):
 # Exercise 5: Length Check
 # Keep asking user for a username until it has at least 5 characters.
 # check to ensure that username is all alphabets
-# while True:
-#     username = input("What is the username: ")
-#     if len(username) < 5:
-#         print("Invalid. username must be at least 5 characters")
-#     else:
-#         break
 
 
 
@@ -188,22 +135,38 @@ def get_valid_number(base):
             print(f"{number} is not valid for base {base}")
             
 
-# parameter = input("Enter a parameter base of 2 or 10: ")
-# result =  get_valid_number("2") # 2 or 10
-
-# print(result)
 
 
 
+# (b) Denary → Binary [6 marks] 
+# Write a function den_to_bin(den_num) that: 
+# Uses repeated division by 2, taking the remainder each time, 
+# Builds the binary string by prepending each remainder, 
+# Returns "0" if the input is 0, 
 
-# ----------------------------------------------------------------
-# (b) Binary → Denary [6 marks]
-# Write a function bin_to_den(binstring) that:
-# •	Reverses the string so the least significant bit is processed first,
-# •	Forms a place-value list [2**0, 2**1, …] matching the string length,
-# •	Multiplies each bit by its positional weight and accumulates the total,
-# •	Returns the denary integer.
-# Example: bin_to_den("11111011") should return 251.
+# Assumes den_num is a non-negative integer 
+# (you may convert the validated string to int before calling this). 
+# Example: den_to_bin(251) should return "11111011". 
+
+def den_to_bin(den_num):
+    # write the code here....
+    bin = ""
+    quotient = den_num
+
+    while quotient > 0 :
+        remainder = quotient % 2
+        quotient = quotient // 2 # calculate the quotient
+         
+        bin = str(remainder) + bin
+    
+    return bin
+
+# function call
+
+binnum = den_to_bin(231)
+print(binnum)
+
+
 
 
 
