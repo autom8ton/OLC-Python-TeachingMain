@@ -1,3 +1,4 @@
+# ________________________________________
 # Task 4 - Development of a Unit Converter (25 marks)
 # You are developing a Python program to convert 
 # digital storage values between SI units (e.g. MB, GB) 
@@ -13,18 +14,24 @@ conversion_factors = {
     "MiB": 1024**2
 }
 
-
 # ________________________________________
 # Code Quality [4 marks]
 # Your program must:
 # •	Use meaningful and consistent variable and function names.
-# •	Be structured using appropriate function decomposition.
+# •	Be structured using appropriate functions.
 # •	Include inline comments that explain important parts of the logic.
+
+
+
 # ________________________________________
 # Task 4.1 - Complete the Dictionary [2 marks]
-# Extend the conversion_factors dictionary to include the following units:
+# Add the following units and values to the 
+# conversion_factors global dictionary.
+
 # •	SI units: "GB", "TB", "PB" (use powers of 1000)
 # •	Binary units: "GiB", "TiB", "PiB" (use powers of 1024)
+
+
 
 
 
@@ -36,9 +43,11 @@ conversion_factors = {
 # ________________________________________
 # Task 4.2 - Display Available Units [3 marks]
 # Write a function named list_units() that:
-# •	Loops through the keys of the conversion_factors dictionary.
-# •	Prints out all the unit names in a numbered list (one per line).
-# •	Allows the user to see which units are supported before making a choice.
+# a.	Loops through and prints out the keys of the conversion_factors dictionary.
+# b.	Prints out all the unit names in a numbered list (one per line).
+# c.	This function will be called in the main program (task 4.5) 
+#       to list out all the possible units for conversion.
+
 # Expected output:
 # Available Units:
 # 1: B
@@ -60,13 +69,16 @@ conversion_factors = {
 
 
 
+
 # ________________________________________
 # Task 4.3 - Validation Function [2 marks]
 # Write a function named is_valid_unit(unit) that:
-# •	Takes in a string unit.
-# •	Returns True if the unit is a valid key in conversion_factors.
-# •	Returns False otherwise.
-# This function will be used to check whether the user has entered a supported unit.
+# a.	Takes in a string parameter unit.
+# b.	Returns True if the unit is a valid key in conversion_factors.
+# c.	Returns False otherwise.
+# d.	This function will be used later in the main program (task 4.5) 
+#       to check if an inputted unit is valid or not.
+
 
 
 
@@ -78,17 +90,18 @@ conversion_factors = {
 # ________________________________________
 # Task 4.4 - Conversion Function [4 marks]
 # Write a function named convert_storage(value, from_unit, to_unit) that:
-# 1.	Multiplies the value by the conversion factor of 
-#       the source unit to get the number of bytes.
-# 2.	Divides the number of bytes by the conversion factor of the target unit.
-# 3.	Returns the result as a float.
+# a.	Takes in an integer parameter value, a string parameter for from_unit, to_unit
+# b.	Multiplies the value by the source unit to get the number of bytes.
+# c.	Divides the number of bytes from step 1 by the target unit.
+# d.	This function will be used later in the main program (task 4.5) 
+#       to convert a numeric value from a source unit to the target unit.
+# e.	Returns the resulting converted value.
 
 # Example: Convert 2 GB into MB.
-# •	Step 1: 2 x conversion_factors["GB"] = 
-#           2 x 1000^3 = 2,000,000,000 bytes
-# •	Step 2: 2,000,000,000 ÷ conversion_factors["MB"] = 
-#           2,000,000,000 ÷ 1000^2 = 2000.0
-# •	Final result: 2 GB = 2000.0 MB
+# •	Step 1: 2 × 1000^3 = 2,000,000,000 bytes
+# •	Step 2: 2,000,000,000 ÷ 1000^2 = 2000.0
+# •	output: 2000.0
+
 
 
 
@@ -98,21 +111,31 @@ conversion_factors = {
 
 # ________________________________________
 # Task 4.5 - User Interaction [10 marks]
-# Write the main program that:
-# 1.	Repeatedly prompts the user to input:
-# o	A numeric value
-# o	A source unit
-# o	A target unit
-# 2.	Validates that:
-# o	The numeric value is a valid positive number.
-# o	Both units are supported (using the is_valid_unit() function).
-# 3.	Calls the convert_storage() function to perform the conversion.
-# 4.	Displays the result to 4 decimal places, e.g.:
-# 10 MB is approximately 9.5367 MiB
-# 5.	Asks the user whether they want to convert another value.
-# o	If the user enters "no", end the program with a farewell message.
-# ________________________________________
 
+# Write the main program that:
+# 1.	At the start, display the list of units using the list_units() function.
+
+# 2.	Repeatedly prompts the user to input a number value
+#       o	Validate that this number is a valid positive number
+#       o	You may assume that the number is always a whole number.
+
+# 3.	Repeatedly prompts the user to input a source unit:
+#       o	Validate that this source unit is a valid unit 
+#           using is_valid_unit() function.
+
+# 4.	Repeatedly prompts the user to input a target unit:
+#       o	Validate that this target unit is a valid unit 
+#           using is_valid_unit() function.
+
+# 5.	Calls the convert_storage() function to perform the conversion.
+
+# 6.	Displays the result to 4 decimal places, e.g.:
+#           10 MB is approximately 9.5367 MiB
+
+# 7.	Asks the user whether they want to convert another value.
+#       o	If the user enters "no", end the program with a farewell message.
+#       o	Else, continue to the next conversion.
+# ________________________________________
 
 
 
@@ -144,6 +167,7 @@ conversion_factors = {
 # ANSWER BELOW ############################################
 ###########################################################
 
+# ________________________________________
 # Task 4 - Development of a Unit Converter (25 marks)
 # You are developing a Python program to convert 
 # digital storage values between SI units (e.g. MB, GB) 
@@ -159,20 +183,24 @@ conversion_factors = {
     "MiB": 1024**2
 }
 
-
 # ________________________________________
 # Code Quality [4 marks]
 # Your program must:
 # •	Use meaningful and consistent variable and function names.
-# •	Be structured using appropriate function decomposition.
+# •	Be structured using appropriate functions.
 # •	Include inline comments that explain important parts of the logic.
+
 
 
 # ________________________________________
 # Task 4.1 - Complete the Dictionary [2 marks]
-# Extend the conversion_factors dictionary to include the following units:
+# Add the following units and values to the 
+# conversion_factors global dictionary.
+
 # •	SI units: "GB", "TB", "PB" (use powers of 1000)
 # •	Binary units: "GiB", "TiB", "PiB" (use powers of 1024)
+
+
 
 conversion_factors['GB'] = 1000**3
 conversion_factors['TB'] = 1000**4
@@ -189,9 +217,11 @@ conversion_factors['PiB'] = 1024**5
 # ________________________________________
 # Task 4.2 - Display Available Units [3 marks]
 # Write a function named list_units() that:
-# •	Loops through the keys of the conversion_factors dictionary.
-# •	Prints out all the unit names in a numbered list (one per line).
-# •	Allows the user to see which units are supported before making a choice.
+# a.	Loops through and prints out the keys of the conversion_factors dictionary.
+# b.	Prints out all the unit names in a numbered list (one per line).
+# c.	This function will be called in the main program (task 4.5) 
+#       to list out all the possible units for conversion.
+
 # Expected output:
 # Available Units:
 # 1: B
@@ -221,10 +251,11 @@ def list_units():
 # ________________________________________
 # Task 4.3 - Validation Function [2 marks]
 # Write a function named is_valid_unit(unit) that:
-# •	Takes in a string unit.
-# •	Returns True if the unit is a valid key in conversion_factors.
-# •	Returns False otherwise.
-# This function will be used to check whether the user has entered a supported unit.
+# a.	Takes in a string parameter unit.
+# b.	Returns True if the unit is a valid key in conversion_factors.
+# c.	Returns False otherwise.
+# d.	This function will be used later in the main program (task 4.5) 
+#       to check if an inputted unit is valid or not.
 
 
 def is_valid_unit(unit):
@@ -238,20 +269,21 @@ def is_valid_unit(unit):
 
 
 
+
 # ________________________________________
 # Task 4.4 - Conversion Function [4 marks]
 # Write a function named convert_storage(value, from_unit, to_unit) that:
-# 1.	Multiplies the value by the conversion factor of 
-#       the source unit to get the number of bytes.
-# 2.	Divides the number of bytes by the conversion factor of the target unit.
-# 3.	Returns the result as a float.
+# a.	Takes in an integer parameter value, a string parameter for from_unit, to_unit
+# b.	Multiplies the value by the source unit to get the number of bytes.
+# c.	Divides the number of bytes from step 1 by the target unit.
+# d.	This function will be used later in the main program (task 4.5) 
+#       to convert a numeric value from a source unit to the target unit.
+# e.	Returns the resulting converted value.
 
 # Example: Convert 2 GB into MB.
-# •	Step 1: 2 x conversion_factors["GB"] = 
-#           2 x 1000^3 = 2,000,000,000 bytes
-# •	Step 2: 2,000,000,000 ÷ conversion_factors["MB"] = 
-#           2,000,000,000 ÷ 1000^2 = 2000.0
-# •	Final result: 2 GB = 2000.0 MB
+# •	Step 1: 2 × 1000^3 = 2,000,000,000 bytes
+# •	Step 2: 2,000,000,000 ÷ 1000^2 = 2000.0
+# •	output: 2000.0
 
 
 def convert_storage(value, from_unit, to_unit):
@@ -274,19 +306,30 @@ def convert_storage(value, from_unit, to_unit):
 
 # ________________________________________
 # Task 4.5 - User Interaction [10 marks]
+
 # Write the main program that:
-# 1.	Repeatedly prompts the user to input:
-# o	A numeric value
-# o	A source unit
-# o	A target unit
-# 2.	Validates that:
-# o	The numeric value is a valid positive number.
-# o	Both units are supported (using the is_valid_unit() function).
-# 3.	Calls the convert_storage() function to perform the conversion.
-# 4.	Displays the result to 4 decimal places, e.g.:
-# 10 MB is approximately 9.5367 MiB
-# 5.	Asks the user whether they want to convert another value.
-# o	If the user enters "no", end the program with a farewell message.
+# 1.	At the start, display the list of units using the list_units() function.
+
+# 2.	Repeatedly prompts the user to input a number value
+#       o	Validate that this number is a valid positive number
+#       o	You may assume that the number is always a whole number.
+
+# 3.	Repeatedly prompts the user to input a source unit:
+#       o	Validate that this source unit is a valid unit 
+#           using is_valid_unit() function.
+
+# 4.	Repeatedly prompts the user to input a target unit:
+#       o	Validate that this target unit is a valid unit 
+#           using is_valid_unit() function.
+
+# 5.	Calls the convert_storage() function to perform the conversion.
+
+# 6.	Displays the result to 4 decimal places, e.g.:
+#           10 MB is approximately 9.5367 MiB
+
+# 7.	Asks the user whether they want to convert another value.
+#       o	If the user enters "no", end the program with a farewell message.
+#       o	Else, continue to the next conversion.
 # ________________________________________
 
 while True: 
