@@ -1,30 +1,55 @@
-WEIGHTS = [2, 7, 6, 5, 4, 3, 2]
-def get_valid_nric():
-  while True:
-    user_nric = input("Enter NRIC: ")
-    user_nric = user_nric.upper()
-    if len(user_nric) != 9:
-      print('NRIC must be 9 characters long.')
-    elif user_nric[0] not in ['S','T','F','G']:
-      print('Invalid starting letter.')  
-    elif not user_nric[8].isalpha():
-      print('Last character of NRIC must be a letter.')
-    elif not user_nric[1:8].isdigit():
-      print('Middle 7 characters must be digits.')
+conversion_factors = {
+    "B": 1,
+    "kB": 1000,
+    "MB": 1000**2,
+    "KiB": 1024,
+    "MiB": 1024**2
+}
+
+conversion_factors["GB"] = 1000**3
+conversion_factors["TB"] = 1000**4
+conversion_factors["PB"] = 1000**5
+conversion_factors["GiB"] = 1024**3
+conversion_factors["TiB"] = 1024**4
+conversion_factors["PiB"] = 1024**5
+print(conversion_factors)
+#4.2
+def list_units():
+    count = 1 
+    for key in conversion_factors:
+        print(f"{count}. {key}")
+        count += 1
+list_units() #need to call define function
+#task 4.3
+def is_valid_unit(unit):
+    if unit in conversion_factors:
+        return True
     else:
-      return user_nric
-    #   break
-
-nric = get_valid_nric()
-
-
-def calculate_weighted_sum(user_nric):
-  digits = nric[1:8] 
-  total = 0
-  for i in range(7):
-        total += int(digits[i]) * WEIGHTS[i]
-  if user_nric[0] in ['T','G']:
-    total += 4
-
-  return total
-
+        return False
+#task 4.4
+def convert_storage(value, from_unit, to_unit):
+    value = int(value)
+    bytes = value * conversion_factors[from_unit]
+    target = bytes / conversion_factors[to_units]
+    return target
+#task 4.5
+print(list_units)
+while True:
+    number = int(input("Please input a number value"))
+    if number > 0:
+        continue
+    else:
+        break
+while True:
+    source_unit = input("Please input a source unit")
+    if is_valid_unit(source_unit):
+        continue
+    else:
+        break
+while True:
+    target_unit = input("Please input a target unit")
+    if is_valid_unit(target_unit):
+        continue
+    else:
+        break
+return convert_storage
