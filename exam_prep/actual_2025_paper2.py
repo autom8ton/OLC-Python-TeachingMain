@@ -1,14 +1,14 @@
-# Task 2
-word_list = ["apple", "window", "bend", "paper", "thought"]
+# # Task 2
+# word_list = ["apple", "window", "bend", "paper", "thought"]
 
-#---------------------------------------
-#Task 2.1
+# #---------------------------------------
+# # Task 2.1
 # new_word = input("Input a new word: ").lower()
 # word_list.append(new_word)
-#---------------------------------------
+# # ---------------------------------------
 
-#---------------------------------------
-# Task 2.2
+# #---------------------------------------
+# # Task 2.2
 # new_word = input("Input a new word: ").lower()
 # word_list.append(new_word)
 
@@ -19,10 +19,10 @@ word_list = ["apple", "window", "bend", "paper", "thought"]
 #         print(f"{w} has 5 or more letters.")
 
 # print(f"There are {countmore5} words with 5 or more letters.")
-#---------------------------------------
+# #---------------------------------------
 
-#---------------------------------------
-# Task 2.3
+# # ---------------------------------------
+# # Task 2.3
 # new_word = input("Input a new word: ").lower()
 # word_list.append(new_word)
 
@@ -42,25 +42,25 @@ word_list = ["apple", "window", "bend", "paper", "thought"]
 #         print(f"{w} begins and end with the same letter.")
 
 # print(f"There are {countsame} words that begin and end with the same letter")
-#---------------------------------------
+# # ---------------------------------------
 
 ##############################################################################
-#Task 3
+# #Task 3
 
-book_authors = {
-    'Winnie the pooh': 'A. A. Milne',
-    'The tale of peter rabbit': 'Beatrix Potter',
-    'The wind in the willows': 'Kenneth Grahame',
-    'The lion, the witch and the wardrobe': 'C. S. Lewis',
-    'Charlie and the chocolate factory': 'Roald Dahl'
-}
+# book_authors = {
+#     'Winnie the pooh': 'A. A. Milne',
+#     'The tale of peter rabbit': 'Beatrix Potter',
+#     'The wind in the willows': 'Kenneth Grahame',
+#     'The lion, the witch and the wardrobe': 'C. S. Lewis',
+#     'Charlie and the chocolate factory': 'Roald Dahl'
+# }
 
 # book = input('Please enter the title of a book: ')
 # add = input("Would you like to add a book> Y or N: ")
 # amend = input("Would you like to change the author of a book? Y or N: ")
 
-#---------------------------------------
-# Task 3.1 
+# #---------------------------------------
+# # Task 3.1 
 # book = input('Please enter the title of a book: ')
 
 # # book = book.title() # easiest
@@ -70,11 +70,11 @@ book_authors = {
 # add = input("Would you like to add a book> Y or N: ")
 # amend = input("Would you like to change the author of a book? Y or N: ")
 
-#---------------------------------------
+# #---------------------------------------
 
 
-#---------------------------------------
-# Task 3.2
+# #---------------------------------------
+# # Task 3.2
 # book = input('Please enter the title of a book: ')
 
 # # book = book.title() # easiest
@@ -88,11 +88,11 @@ book_authors = {
 
 # add = input("Would you like to add a book> Y or N: ")
 # amend = input("Would you like to change the author of a book? Y or N: ")
-#---------------------------------------
+# #---------------------------------------
 
 
-#---------------------------------------
-# Task 3.3
+# #---------------------------------------
+# # Task 3.3
 # add = input("Would you like to add a book> Y or N: ").upper()
 
 # if add == "Y":
@@ -105,18 +105,13 @@ book_authors = {
 
 # print(book_authors)
 
-    # if book in book_authors:
-    #     print(f"The author of {book} is {book_authors[book]}")
-    # else:
-    #     print(f"Book {book} is unknown.")
-
-    # amend = input("Would you like to change the author of a book? Y or N: ")
-#---------------------------------------
+# amend = input("Would you like to change the author of a book? Y or N: ")
+# #---------------------------------------
 
 
 
-#---------------------------------------
-# Task 3.4
+# #---------------------------------------
+# # Task 3.4
 # add = input("Would you like to add a book> Y or N: ").upper()
 
 # if add == "Y":
@@ -149,7 +144,7 @@ book_authors = {
 
 #     print(book_authors)
 
-#---------------------------------------
+# #---------------------------------------
 
 ############################################################
 # Task 4 Debugging
@@ -210,6 +205,7 @@ book_authors = {
 
 # -------------------------------------------------
 # Task 5.1
+# Start of 5.1 Code
 def total_cost(cost):
     tax = cost * 0.09 # calculate the tax of 9%
     total = cost + tax
@@ -219,26 +215,26 @@ def total_cost(cost):
 
 # -------------------------------------------------
 # Task 5.2
+# Start of 5.1 Code
 def total_cost(cost):
     tax = cost * 0.09 # calculate the tax of 9%
     total = cost + tax
 
     return total
 
-# start of 5.2 code
+# Start of 5.2 Code
 def discount(cost):
+    cost = total_cost(cost) # calculate the tax
 
     if cost >= 50 and cost < 100:
-        discount = 0.05 * cost
+        discounted = 0.05 * cost
         
     elif cost >= 100:
-        discount = 0.1 * cost
+        discounted = 0.1 * cost
     else:
-        discount = 0
+        discounted = 0
 
-    cost = cost - discount # apply the discount first
-
-    cost = total_cost(cost) # calculate the tax
+    cost = cost - discounted # apply the discount first
 
     return cost
 # -------------------------------------------------
@@ -246,27 +242,156 @@ def discount(cost):
 
 # -------------------------------------------------
 # Task 5.3
+# Start of 5.1 Code
 def total_cost(cost):
     tax = cost * 0.09 # calculate the tax of 9%
     total = cost + tax
 
     return total
 
+# Start of 5.2 Code
 def discount(cost):
+    cost = total_cost(cost) # calculate the tax
 
     if cost >= 50 and cost < 100:
-        discount = 0.05 * cost
+        discounted = 0.05 * cost
         
     elif cost >= 100:
-        discount = 0.1 * cost
+        discounted = 0.1 * cost
     else:
-        discount = 0
+        discounted = 0
 
-    cost = cost - discount # apply the discount first
-
-    cost = total_cost(cost) # calculate the tax
+    cost = cost - discounted # apply the discount first
 
     return cost
 
-# start of 5.3 code
-# def reward_points()
+# Start of 5.3 Code
+def reward_points(total_cost_with_discount):
+
+    # round down then multiply by 3
+    reward = int(total_cost_with_discount) * 3
+
+    return reward
+# -------------------------------------------------
+
+
+# -------------------------------------------------
+# Task 5.4
+# Start of 5.1 Code
+def total_cost(cost):
+    tax = cost * 0.09 # calculate the tax of 9%
+    total = cost + tax
+
+    return total
+
+# Start of 5.2 Code
+def discount(cost):
+    cost = total_cost(cost) # calculate the tax
+
+    if cost >= 50 and cost < 100:
+        discounted = 0.05 * cost
+        
+    elif cost >= 100:
+        discounted = 0.1 * cost
+    else:
+        discounted = 0
+
+    cost = cost - discounted # apply the discount first
+
+    return cost
+
+# Start of 5.3 Code
+def reward_points(total_cost_with_discount):
+
+    # round down then multiply by 3
+    reward = int(total_cost_with_discount) * 3
+
+    return reward
+
+# Start of 5.4 Code
+def voucher(total_cost_with_discount, customer_first_name):
+    if total_cost_with_discount > 25 and total_cost_with_discount <= 50:
+        voucher_code = f"{customer_first_name[:3]}05PERCENT"
+    elif total_cost_with_discount > 50:
+        voucher_code = f"{customer_first_name[:3]}10PERCENT"
+    else:
+        voucher_code = None
+
+    return voucher_code
+
+# -------------------------------------------------
+
+
+
+# -------------------------------------------------
+# Task 5.5
+
+# Start of 5.1 Code
+def total_cost(cost):
+    tax = cost * 0.09 # calculate the tax of 9%
+    total = cost + tax
+
+    return total
+
+# Start of 5.2 Code
+def discount(cost):
+    cost = total_cost(cost) # calculate the tax
+
+    if cost >= 50 and cost < 100:
+        discounted = 0.05 * cost
+        
+    elif cost >= 100:
+        discounted = 0.1 * cost
+    else:
+        discounted = 0
+
+    cost = cost - discounted # apply the discount first
+
+    return cost
+
+# Start of 5.3 Code
+def reward_points(total_cost_with_discount):
+
+    # round down then multiply by 3
+    reward = int(total_cost_with_discount) * 3
+
+    return reward
+
+# Start of 5.4 Code
+def voucher(total_cost_with_discount, customer_first_name):
+    if total_cost_with_discount > 25 and total_cost_with_discount <= 50:
+        voucher_code = f"{customer_first_name[:3]}05PERCENT"
+    elif total_cost_with_discount > 50:
+        voucher_code = f"{customer_first_name[:3]}10PERCENT"
+    else:
+        voucher_code = None
+
+    return voucher_code
+
+# Start of 5.5 code
+fname = input("Enter Customer's First Name: ")
+cost_of_sale = float(input("Enter the cost of sale: ")) # convert to float
+
+print("-"*30)
+print("Receipt")
+
+total_cost_of_sale = total_cost(cost_of_sale)
+print(f"Total cost of sale: ${round(total_cost_of_sale, 2)}")
+
+discounted_cost = discount(cost_of_sale)
+print(f"Discounted cost of sale: ${round(discounted_cost,2)}")
+
+rewards = reward_points(discounted_cost)
+print(f"Rewards received: {rewards}")
+
+vcode = voucher(discounted_cost, fname)
+if vcode == None:
+    print("You need to spend over $25 for a voucher code.")
+else:
+    print(f"Your Voucher Code is {vcode}")
+
+    with open("vouchercode.txt", "w") as fobj:
+        fobj.write(vcode)
+
+print("Thank you for shopping. Bye!")
+print("-"*30)
