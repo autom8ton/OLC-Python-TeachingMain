@@ -1,3 +1,46 @@
+# slicing works on strings, and lists
+
+# a string is a list of characters
+
+word = "SINGAPORE"
+
+firstchar = word[0] # retrieve first character
+print(firstchar)
+
+lastchar = word[-1] # retrieve the last character
+print(lastchar)
+
+# [start: stop: step]
+# retrieve word SIN from SINGAPORE
+
+var1 = word[0:3]
+print(var1)
+
+# retrieve GAP from SINGAPORE
+var2 = word[3:6]
+print(var2)
+
+# retrieve the last 4 characters from the word
+var3 = word[-4:] # blank means go all the way till the end
+print(var3)
+
+# want to retrieve every second character
+var4 = word[::2]   # S I N G A P O R E
+print(var4)
+
+book = "winnie the pooh"  ### Winnie the pooh
+# capitalise the first letter of first word
+
+after_capitalise = book[0].upper() + book[1:]
+# after_capitalise = book.title()
+print(after_capitalise)
+
+
+
+
+
+
+
 # ###########################################################
 # # Part 2: IN-CLASS Practice Exercises
 
@@ -305,19 +348,19 @@
 
 # Exercise 7: Extracting Middle Elements from a List
 # Scenario: Extract the middle 3 elements from a list with an odd 
-# number of elements.
-numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
+# # number of elements.
+# numbers = [10, 20, 30, 40, 50, 60, 70, 80, 90]
 
-# find the middle index of this list
-mid = len(numbers) // 2
-print(mid) # returns the middle index
+# # find the middle index of this list
+# mid = len(numbers) // 2
+# print(mid) # returns the middle index
 
 
-# Exercise 1: Simple List Slicing
-# Write a program to extract the first 3 elements from a list.
-numbers = [10, 20, 30, 40, 50]
+# # Exercise 1: Simple List Slicing
+# # Write a program to extract the first 3 elements from a list.
+# numbers = [10, 20, 30, 40, 50]
 
-print(numbers[0:3])
+# print(numbers[0:3])
 
 
 

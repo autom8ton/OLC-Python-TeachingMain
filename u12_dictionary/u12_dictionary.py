@@ -1,196 +1,200 @@
 # key and value pair
 menu = {"hamburger":5.6, "pizza":18, "fries":5, "noodle":28, "icecream":9 }
 
-# how to retrieve value from dictionary
-# what is the price of hamburger
-h_price = menu["hamburger"]
-print(h_price)
+# add to dictionary
 
-print(menu) # before adding lasagne
-## add a new key value pair
-menu["lasagne"] = 12
+menu["pasta"] = 8.9
 
-print(menu) # before changing price
-
-# the code for adding/ changing is the same
-menu["lasagne"] = 20
-print(menu) # after changing price
-
-del menu["lasagne"]
 print(menu)
+
+# # how to retrieve value from dictionary
+# # what is the price of hamburger
+# h_price = menu["hamburger"]
+# print(h_price)
+
+# print(menu) # before adding lasagne
+# ## add a new key value pair
+# menu["lasagne"] = 12
+
+# print(menu) # before changing price
+
+# # the code for adding/ changing is the same
+# menu["lasagne"] = 20
+# print(menu) # after changing price
+
+# del menu["lasagne"]
+# print(menu)
 
 # check for existence of a key in a dictionary
 # choice = input("What do you want to eat? ")
 # if choice in menu:
 #     print(f"{choice} is in my menu")
 # else:
-#     print(f"{choice} is not in my menu")
+# #     print(f"{choice} is not in my menu")
 
-maxprice = 0
-maxfood = ""
-# loop through all the key and value pair in dictionary
-for food, price in menu.items():
-    print(f"{food} is ${price}")
+# maxprice = 0
+# maxfood = ""
+# # loop through all the key and value pair in dictionary
+# for food, price in menu.items():
+#     print(f"{food} is ${price}")
 
-    if price > maxprice:
-        maxprice = price 
-        maxfood = food
+#     if price > maxprice:
+#         maxprice = price 
+#         maxfood = food
 
-# find the most expensive item in the dictionry
-print(f"{maxfood} is the most expensive at ${maxprice}")
-
-
-names = ["Tom","Dick","Harry"]
-scores = [56, 78, 89]
-student_scores = {}
-
-# problem - combine these 2 list into a dictionary
-
-# loop through both 
-
-for i in range(len(names)):
-    currentstudent = names[i]
-    currentscore = scores[i]
-
-    # add to the dictionary
-    student_scores[currentstudent] = currentscore
-
-print(student_scores)
+# # find the most expensive item in the dictionry
+# print(f"{maxfood} is the most expensive at ${maxprice}")
 
 
+# names = ["Tom","Dick","Harry"]
+# scores = [56, 78, 89]
+# student_scores = {}
 
-# # integer
-# # var1 = 10 # integer # do math here
-# # var2 = "10" # string
-# # var3 = 3.14 # float
-# # var4 = True # or False Boolean
+# # problem - combine these 2 list into a dictionary
 
-# # var5 = [1, 2, 3, 4, 5] # list of numbers
+# # loop through both 
+
+# for i in range(len(names)):
+#     currentstudent = names[i]
+#     currentscore = scores[i]
+
+#     # add to the dictionary
+#     student_scores[currentstudent] = currentscore
+
+# print(student_scores)
 
 
-# menu = {"hamburger": 6, "pizza": 15, "fries": 5, "coke": 2}
-# menu["sausage"] = 6
-# print(menu)
 
-# # # how to retrieve a value from the dictionary
-# # # example retrieve price of pizza
-# # pizzaprice = menu["pizza"]
-# # print(f"The price of pizza is ${pizzaprice}")
+# # # integer
+# # # var1 = 10 # integer # do math here
+# # # var2 = "10" # string
+# # # var3 = 3.14 # float
+# # # var4 = True # or False Boolean
 
-# # # how to add a new key value/ pair into dictionary
-# # print(menu) # before adding
-# # menu["hotdog"] = 9
-# # print(menu) # after adding
+# # # var5 = [1, 2, 3, 4, 5] # list of numbers
 
-# # # how to change the value of key/ value pair
-# # menu["hamburger"] = 10
+
+# # menu = {"hamburger": 6, "pizza": 15, "fries": 5, "coke": 2}
+# # menu["sausage"] = 6
 # # print(menu)
 
-# # # check for existence for a key in dictionary
-# # choice = input("What do you want to eat? ")
-# # if choice in menu:
-# #     print(f"Yes, I sell {choice}")
-# #     #add code here to tell customer the price
-# #     print(f"Give me ${menu[choice]}")
-# # else:
-# #     print(f"Sorry, I do not sell {choice}. Go next door.")
+# # # # how to retrieve a value from the dictionary
+# # # # example retrieve price of pizza
+# # # pizzaprice = menu["pizza"]
+# # # print(f"The price of pizza is ${pizzaprice}")
 
-# # # how to loop through the items in the dictionary
-# # print("Welcome to my restaurant!")
-# # print('Here is the menu')
-# # for food,price in menu.items():
-# #     print(f"{food} : ${price}")
+# # # # how to add a new key value/ pair into dictionary
+# # # print(menu) # before adding
+# # # menu["hotdog"] = 9
+# # # print(menu) # after adding
 
+# # # # how to change the value of key/ value pair
+# # # menu["hamburger"] = 10
+# # # print(menu)
 
-# # # the more traditional way of looping through dictionary
-# # for food in menu:
-# #     print(food) # loops through the key in dictionary
-# #     print(menu[food]) # pulls out the value in dictionary
+# # # # check for existence for a key in dictionary
+# # # choice = input("What do you want to eat? ")
+# # # if choice in menu:
+# # #     print(f"Yes, I sell {choice}")
+# # #     #add code here to tell customer the price
+# # #     print(f"Give me ${menu[choice]}")
+# # # else:
+# # #     print(f"Sorry, I do not sell {choice}. Go next door.")
 
-
-
-
-
-
-
-
-
-
+# # # # how to loop through the items in the dictionary
+# # # print("Welcome to my restaurant!")
+# # # print('Here is the menu')
+# # # for food,price in menu.items():
+# # #     print(f"{food} : ${price}")
 
 
-
-
-
-
-# # # string, integer, floats, boolean, list, dictionary
-# # # key and value pair
-
-# # # define a dictionary 
-# # countries = {"malaysia":"kuala lumpur", "china":"beijing", "indonesia":"jakarta"}
-
-# # # how to retrieve a value from dictionary
-# # cap1 = countries["malaysia"]
-# # print(cap1)
-
-# # # add to dictionary
-# # countries["japan"] = "tokyo" # if the key does not exist, it will add it
-# # print(countries)
-
-# # # change a value in a dictionary
-# # countries["japan"] = "osaka" # if the key does exist, it will change the value
-# # print(countries)
-
-# # # delete a key/ value pair from dictionary
-# # del countries["malaysia"]
-# # print(countries)
-
-# # # check whether a particular key exist in dictionary # existance check
-# # if "malaysia" in countries:
-# #     print("malaysia exists")
-# # else:
-# #     print("malaysia does not exist")
-
-# # # how to loop through all the key/ value pairs in dictionary
-# # for country, capital in countries.items():
-# #     # print(country)
-# #     # print(capital)
-# #     print(f"The capital of {country} is {capital}.")
-
-
-# # #### Code a Restaurant Ordering Program
-
-# # # Task 1: Create a dictionary containing 3 food items and their prices
-
-# # # Task 2: Ask customer what they want to eat?
-
-# # # Task 3: Check if order is available
-# #             # if available, print the price
-# #             # else, tell customer not available
+# # # # the more traditional way of looping through dictionary
+# # # for food in menu:
+# # #     print(food) # loops through the key in dictionary
+# # #     print(menu[food]) # pulls out the value in dictionary
 
 
 
-# # # Challenge: Advanced Grade Analysis
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # # # string, integer, floats, boolean, list, dictionary
+# # # # key and value pair
+
+# # # # define a dictionary 
+# # # countries = {"malaysia":"kuala lumpur", "china":"beijing", "indonesia":"jakarta"}
+
+# # # # how to retrieve a value from dictionary
+# # # cap1 = countries["malaysia"]
+# # # print(cap1)
+
+# # # # add to dictionary
+# # # countries["japan"] = "tokyo" # if the key does not exist, it will add it
+# # # print(countries)
+
+# # # # change a value in a dictionary
+# # # countries["japan"] = "osaka" # if the key does exist, it will change the value
+# # # print(countries)
+
+# # # # delete a key/ value pair from dictionary
+# # # del countries["malaysia"]
+# # # print(countries)
+
+# # # # check whether a particular key exist in dictionary # existance check
+# # # if "malaysia" in countries:
+# # #     print("malaysia exists")
+# # # else:
+# # #     print("malaysia does not exist")
+
+# # # # how to loop through all the key/ value pairs in dictionary
+# # # for country, capital in countries.items():
+# # #     # print(country)
+# # #     # print(capital)
+# # #     print(f"The capital of {country} is {capital}.")
+
+
+# # # #### Code a Restaurant Ordering Program
+
+# # # # Task 1: Create a dictionary containing 3 food items and their prices
+
+# # # # Task 2: Ask customer what they want to eat?
+
+# # # # Task 3: Check if order is available
+# # #             # if available, print the price
+# # #             # else, tell customer not available
+
+
+
+# # # # Challenge: Advanced Grade Analysis
  
-# # # Scenario: A teacher needs detailed analysis of class performance.
-# # students = {"Alice": 85, "Bob": 78, "Charlie": 92, "Diana": 88, "Eve": 76}
+# # # # Scenario: A teacher needs detailed analysis of class performance.
+# # # students = {"Alice": 85, "Bob": 78, "Charlie": 92, "Diana": 88, "Eve": 76}
 
-# # # Task 1: Find and print the names of students who scored below the average grade.
+# # # # Task 1: Find and print the names of students who scored below the average grade.
 
-# # # average >>> add up total / number students
+# # # # average >>> add up total / number students
 
-# # # average
+# # # # average
 
-# # # for student,score in students.items():
-# # #     if score < average:
-# # #         print(f"{student} scored less than {average}")
-
-
-# # #------------------------------------------------------------
-# # # Task 2: Create a new dictionary with students categorized as "Pass" or "Fail".
-# # # Assume a passing grade is 80 or above.
-# # # print a message warning students who fail e.g. Bob failed! You need to work harder.
+# # # # for student,score in students.items():
+# # # #     if score < average:
+# # # #         print(f"{student} scored less than {average}")
 
 
+# # # #------------------------------------------------------------
+# # # # Task 2: Create a new dictionary with students categorized as "Pass" or "Fail".
+# # # # Assume a passing grade is 80 or above.
+# # # # print a message warning students who fail e.g. Bob failed! You need to work harder.
 
 
 
@@ -210,22 +214,24 @@ print(student_scores)
 
 
 
-# # # food = ["hamburger",
-# # #            "pasta",
-# # #            "pizza",
-# # #            "fries",
-# # #            "nuggets"]
 
-# # # price = [2,
-# # #         15,
-# # #         21,
-# # #         5,
-# # #         6]
 
-# # # # key/ value
-# # # # key must be unique
-# # # menu = {"hamburger":2,
-# # #         "pasta":15,
+# # # # food = ["hamburger",
+# # # #            "pasta",
+# # # #            "pizza",
+# # # #            "fries",
+# # # #            "nuggets"]
+
+# # # # price = [2,
+# # # #         15,
+# # # #         21,
+# # # #         5,
+# # # #         6]
+
+# # # # # key/ value
+# # # # # key must be unique
+# # # # menu = {"hamburger":2,
+# # # #         "pasta":15,
 # # #         "pizza":21,
 # # #         "fries":5,
 # # #         "nuggets":6}
