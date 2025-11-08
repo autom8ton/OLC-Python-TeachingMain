@@ -108,27 +108,39 @@ def remove_word(phrase):
     # converts the phrase into a list of words.  [3] 
 
     # Code to split a string into a list without using .split()
-    separator = " "         # what separates one word from the next
-    position_separator = 0     # current position of delimiter
-    previous_position = 0         # position
-    wordlist = []              # list to hold the final output
+    ### SIMPLE ENOUGH CODE - BUT DOES NOT CATCH SOME SCENARIOS
+    wordlist = []
+    thisword = ""
+    for char in phrase:
+        if char == " ":
+            wordlist.append(thisword)
+            thisword = ""
+        else:
+            thisword = thisword + char
+    wordlist.append(thisword) # for the last word
 
-    while True: # while because you do not know how long this phrase is.
-        # find the position of the " " separator from previous position
-        position_separator = phrase.find(separator, previous_position)
+    #### COMPLEX CODE - BUT BETTER
+    # separator = " "         # what separates one word from the next
+    # position_separator = 0     # current position of delimiter
+    # previous_position = 0         # position
+    # wordlist = []              # list to hold the final output
 
-        # if no separator found, means its the last word.
-        if position_separator == -1:
-            wordlist.append(phrase[previous_position:])
-            break
+    # while True: # while because you do not know how long this phrase is.
+    #     # find the position of the " " separator from previous position
+    #     position_separator = phrase.find(separator, previous_position)
 
-        # slice the word from previous position, to the next separator
-        wordpart = phrase[previous_position:position_separator]
+    #     # if no separator found, means its the last word.
+    #     if position_separator == -1:
+    #         wordlist.append(phrase[previous_position:])
+    #         break
 
-        wordlist.append(wordpart) # append the sliced word
+    #     # slice the word from previous position, to the next separator
+    #     wordpart = phrase[previous_position:position_separator]
 
-        # advance the previous position to next letter
-        previous_position = position_separator + len(separator)
+    #     wordlist.append(wordpart) # append the sliced word
+
+    #     # advance the previous position to next letter
+    #     previous_position = position_separator + len(separator)
     
     # print(wordlist) # testing only
 
@@ -165,6 +177,6 @@ def remove_word(phrase):
     # allows the user to input a phrase and convert to lower case [1]
 phrase = input("Enter a phrase").lower()
 # phrase = "Im Im a big big girl in a big big world".lower()
-# phrase = "Sorry sorry sorry sorry sorry naega naega"
+# phrase = "Sorry sorry sorry sorry sorry naega naega".lower()
 cleaned = remove_word(phrase)
 print(cleaned) # testing only
