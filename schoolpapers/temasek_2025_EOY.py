@@ -82,14 +82,19 @@
 
 # The task is to write a function remove_word(phrase) that removes
 # consecutive repeated words in a phrase. The program:
+
 # >> allows the user to input a phrase and convert to lower case [1]
+
 # >> converts the phrase into a list of words. 
 #     Do this without the help of the builtin
 #     strings function such as str.split() [3]
+
 # >> removes consecutive repeated words from the list [3]
+
 # >> converts the list back into a new phrase. 
 #      Do this without the help of the built-in
 #     string functions such as str.join() [2]
+
 # >> returns and displays the new phrase. [1]
 
 # Save your Jupyterlab notebook for Task 4.
@@ -102,6 +107,11 @@
 # Enter a phrase: Sorry sorry sorry sorry sorry naega naega
 # New phrase: sorry naega
 
+
+# im a big big girl in a big big world
+["im","a","big","big","girl"]
+
+
 def remove_word(phrase):
 
     #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -110,14 +120,16 @@ def remove_word(phrase):
     # Code to split a string into a list without using .split()
     ### SIMPLE ENOUGH CODE - BUT DOES NOT CATCH SOME SCENARIOS
     wordlist = []
-    thisword = ""
+
+    # loop through every character in the sentence (phrase)
     for char in phrase:
         if char == " ":
-            wordlist.append(thisword)
+            wordlist.append(thisword) 
             thisword = ""
         else:
             thisword = thisword + char
     wordlist.append(thisword) # for the last word
+    print(wordlist)
 
     #### COMPLEX CODE - BUT BETTER
     # separator = " "         # what separates one word from the next
@@ -148,6 +160,8 @@ def remove_word(phrase):
     # removes consecutive repeated words from the list [3]
     clean_wordlist = []
 
+    #im a big big girl in a big big world
+
     for i in range(len(wordlist)):
         # handle first word, and add first word by default
         if i == 0:
@@ -175,8 +189,29 @@ def remove_word(phrase):
 
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     # allows the user to input a phrase and convert to lower case [1]
-phrase = input("Enter a phrase").lower()
-# phrase = "Im Im a big big girl in a big big world".lower()
+# phrase = input("Enter a phrase").lower()
+phrase = "Im a big big girl in a big big world".lower()
 # phrase = "Sorry sorry sorry sorry sorry naega naega".lower()
 cleaned = remove_word(phrase)
 print(cleaned) # testing only
+
+
+
+# 
+
+
+# phrase = "im a big big girl in a big big world"
+# wordlist = [] 
+# thisword = ""
+
+# # loop through every character in the sentence (phrase)
+# for char in phrase:
+#     if char == " ":
+#         wordlist.append(thisword) 
+#         thisword = ""
+#     else:
+#         thisword = thisword + char
+# wordlist.append(thisword) # for the last word
+# print(wordlist)
+
+
