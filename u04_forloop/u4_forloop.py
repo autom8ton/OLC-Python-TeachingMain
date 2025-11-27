@@ -1,120 +1,50 @@
-# print numbers from 0 to 9
-for i in range(10):
-    print(i)
+#######
 
+# loop - repeats certain codes
 
-
-
-
-
-# for loop is like the repeat loop in scratch
-
-# range(10), string, list, dictionary
-
+# i for iteration
 # for i in range(10):
 #     print(i)
 
+# # i want to start counting from 1 - 10
 
-# name = "KEIJI"
-
-# for c in name:
-#     print(f"Give me a {c}!")
-
-# print("who is the best?!?!?!")
-# print(name)
-
-# range(stop)
-# for i in range(10):
+# for i in range(1, 11):
 #     print(i)
 
-# range(start, stop)
-# for i in range(5,16):
+# print from 23- 35
+
+# print from 88-96
+
+# multiples of 4 from 4 to 48
+# for i in range(4, 49, 4): # start, stop and step
 #     print(i)
 
-# range(start, stop, step)
-# for i in range(4, 49, 4):
+# # print multiples of 2 from 2 to 24
+
+# # print odd numbers from 3 to 27
+
+# # print descending numbers from 10 to 1
+
+# for i in range(10, 0, -1):
 #     print(i)
 
-# for i in range(10, -1, -1):
-#     print(i)
 
-# for i in range(10):
-#     print(i)
+#########################################
+# create a times-table program
 
-# javascript/ C/ C++/ C#/ Java
-# for (var i = 0; i < 10; i++){
-#     console.log(i)
-# }
+# ask the user to enter a number 
+number = input("Enter a number: ")
 
+for i in range(1, 13):
+    # print(i)
+    answer = int(number) * i # return me the answer
 
+    print(f"{number} x {i} = {answer}")
 
+    # print(number, " x ", i, "=", answer)
 
+# 3 x 1 = 3
+# 3 x 2 = 6
+# .....
+# 3 x 12 = 36
 
-
-# U4 - Exercise 2
-# Write a program to generate the multiplication tables for
-# any number.
-# Example:
-# Input = 5
-# Output:
-# 5 x 1 = 5
-# 5 x 2 = 10
-# ...
-
-# * operator
-# join statements >>> f"
-# input() / print()
-# range()
-# for loop
-
-# num = int(input("What is the number: "))
-
-# for i in range(1, 13):
-#     print(f"{num} x {i} = {num * i}")
-
-
-# print(f"{num} x 1 = {num * 2}")
-# print(f"{num} x 1 = {num * 3}")
-# print(f"{num} x 1 = {num * 4}")
-# print(f"{num} x 1 = {num * 5}")
-
-
-
-# print(num * 1)
-# print(num * 2)
-# print(num * 3)
-# print(num * 4)
-# print(num * 5)
-# print(num * 6)
-# print(num * 7)
-# print(num * 8)
-# print(num * 9)
-# print(num * 10)
-
-
-
-#------------------------------------------------------------
-# Exercise 11: Custom Counting Pattern
-# Write a program to print the following pattern:
-# 5
-# 44
-# 333
-# 2222
-# 11111
-
-# # counter algorithm 
-# count = 1
-
-# for i in range(5, 0, -1):  
-#     print(str(i) * count) 
-#     count = count + 1 ### same as change (count) by 1
-    
-# using for loops
-
-# print numbers from 0 - 9
-
-# print numbers from 1 to 15
-
-# print even numbers from 2 to 24
-
-# print numbers from 10 to 1

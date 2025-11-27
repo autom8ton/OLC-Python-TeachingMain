@@ -1,3 +1,35 @@
+# why do we need File IO? File Input/ Output
+
+# the syntax to open a file
+with open('colours.txt') as file:
+    # read the contents of the file
+
+    filestring = file.read() # returns a string
+
+filelist = filestring.split(',')
+    
+# # if you do not use with open
+
+# file = open('colours.txt')
+# filestring = file.read()
+
+# # after i am done reading the file, i need to close it.
+# file.close() # explicitly do this
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 3 modes, r, w, a
 
 # write mode

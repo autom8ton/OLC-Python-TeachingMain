@@ -1,40 +1,75 @@
-#####
-# variable types
-# numbers - integers (whole numbers), floats (floating point numbers)
-# string - words, anything with quotation mark is a string
-# boolean - True/ False
-# list - list of values (numbers, string, boolean, dictionary ..... )
-# dictionary - key/ value pairs
+#------------------------------------------------------------
+# Exercise 8: Area of a Circle with .format()
+# Write a program to ask the user for the radius of a circle, convert it to
+# a float, calculate the area using the formula (area = 3.14 * r^2), and
+# display the result using .format(). Example:
+# Input: radius = 7
+# Output: "The area of the circle is 153.86."
 
-# var1 = "dog" # string
-# var2 = "cat" # string
-# var3 = var1 + var2 # + on 2 strings, will join (string concatenation)
-# print(var3)
 
-# var4 = 10 # integer
-# var5 = 20 # integer
-# var6 = var4 + var5 # + on 2 integers will add them
-# print(var6)
 
-# # type conversion int() str()
-# var7 = str(var4) + var1
-# # var8 = var4 * var1
-# print(var7)
+# integer - whole number
+# float - decimal number
 
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
-answer = num1 + num2
+radius = float(input("What is the radius of the circle: "))
 
-# option 1 - basic but painful
-# print(str(num1) + " + " + str(num2) + " = " + str(answer))
 
-# option 2 - a bit better, but only works for print()
-# print(num1, " + ", num2, " = ", answer)
+# use the for loop and print out numbers from 0 to 5
 
-# option 3 - more powerful, correct
-# sentence = "{} + {} = {}".format(num1, num2, answer)
+# use the for loop and print out numbers from 1 to 5
+
+# use the for loop and print out multiples of 5 from 5 to 50
+
+# use the for loop and print out numbers from 10 to 1
+
+
+
+
+
+
+
+
+
+
+
+
+# name = input("What is your name: ")
+# hobby = input("What is your hobby: ")
+
+# sentence = f"{name} likes {hobby}"
+
 # print(sentence)
 
-# option 4 - f string
-sentence = f"{num1} + {num2} = {answer}"
-print(sentence)
+
+# VARIABLE TYPE
+
+# string variable - word
+
+# var1 = "DOG"
+# var2 = "CAT"
+
+# var3 = var1 + var2
+# print(var3)
+
+# # # a plus on 2 strings, will join together
+
+# var4 = 10
+# var5 = 20
+# var6 = var4 + var5
+# print(var6)
+# # a plus on 2 numbers will add together
+
+# var7 = var1 + var4
+# print(var7)
+
+# type input conversion
+
+# simple addition calculator
+# num1 = int(input("Enter Number 1: ")) #default, it is always a string
+# num2 = int(input("Enter Number 2: "))
+# result = num1 + num2
+# print(result)
+
+# # int() converts a string to a number
+
+# print(round(3.1415,2))

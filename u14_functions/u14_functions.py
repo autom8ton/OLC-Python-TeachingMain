@@ -1,3 +1,113 @@
+# print("")
+
+# import random
+# random.randint(1, 100)
+
+# int() 
+# float()
+
+# append()
+
+# input()
+
+# .islower()
+# .isdigit()
+# .isupper()
+
+# how to define a function
+# def hello():
+#     print("Hello, how are you?")
+
+# call the function
+# hello()
+
+# function with a parameter
+# def greet(yourname, myname):
+#     print(f"Hello {yourname}, how are you? ")
+#     print(f"My name is {myname}")
+
+# greet("Yu Yang","David")
+
+### imagine a scenario
+
+# area of 5 rectangle
+
+# rect 1 = 65, 89
+# rect 2 = 75, 12
+# rect 3 = 4, 75
+# rect 4 = 78, 36
+# rect 5 = 14, 89
+
+# calculate the total area of all these 5 rectangles
+
+# def area_rectangle(length, breadth):
+#     area = length * breadth
+
+#     return area # return this value back
+
+# rect1 = area_rectangle(65, 89)
+# rect2 = area_rectangle(75, 12)
+# rect3 = area_rectangle(4, 75)
+# rect4 = area_rectangle(78, 36)
+# rect5 = area_rectangle(14, 89)
+
+# total = rect1 + rect2 + rect3 + rect4 + rect5
+# print(total)
+
+# Exercise 8: Simple Calculator
+# Write a function that takes two numbers and an operator (+, -, *, /)
+# and returns the result of the calculation.
+
+
+# Test the function with multiple operations.
+# print(calculator(10, 5, "+")) ## sampleoutput: 10 + 5 = 15
+# print(calculator(10, 5, "-"))
+# print(calculator(10, 5, "*"))
+# print(calculator(10, 5, "/"))
+
+def calculator(number1, number2, op):
+    # put your code here.... 
+    if op == "+":
+        output = number1 + number2
+    elif op == "-":
+        output = number1 - number2
+    elif op == "*":
+        output = number1 * number2
+    elif op == "/":
+        output = number1 / number2
+    
+    return output
+
+num1 = int(input("Input first number: "))
+num2 = int(input("Input second number: "))
+operation = input("Enter operation (+, -, *, /): ")
+
+answer = calculator(num1, num2, operation)
+
+print(f"{num1} {operation} {num2} = {answer}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # ###################################################
 # # Part 1: Learning Exercises
@@ -62,19 +172,19 @@
 # # print("The area of the rectangle is {}".format(area))
 
 
-def area_triangle(base, height):
-    area = 0.5 * base * height
+# def area_triangle(base, height):
+#     area = 0.5 * base * height
 
-    list1 = [1,2,3]
-    list2 = [5,6,7]
+#     list1 = [1,2,3]
+#     list2 = [5,6,7]
     
-    return list1, list2
-    # print(area)
-    # print(f"The area of triangle of base {base} and height {height} is {area} ")
+#     return list1, list2
+#     # print(area)
+#     # print(f"The area of triangle of base {base} and height {height} is {area} ")
 
-var1, var2 = area_triangle(10,10)
-print(var1)
-print(var2)
+# var1, var2 = area_triangle(10,10)
+# print(var1)
+# print(var2)
 
 # area1 = area_triangle(10, 89)
 # area2 = area_triangle(45, 546457)
@@ -284,19 +394,19 @@ print(var2)
 # Input: First Name: "John", Last Name: "Doe"
 # Random animal: "Tiger", Random number: 42
 # Output: "JohnDoeTiger42"
-import random
+# import random
 
-def genusername(firstname, lastname):
+# def genusername(firstname, lastname):
 
-    animals = ["Tiger", "Lion", "Bear", "Wolf", "Eagle"]
-    rananimal = random.choice(animals) # choose random item from list
-    rannum = random.randint(10, 99)
+#     animals = ["Tiger", "Lion", "Bear", "Wolf", "Eagle"]
+#     rananimal = random.choice(animals) # choose random item from list
+#     rannum = random.randint(10, 99)
 
-    uname = firstname + lastname + rananimal + str(rannum)
-    return uname
+#     uname = firstname + lastname + rananimal + str(rannum)
+#     return uname
 
-fname = input("What is your first name: ")
-lname = input("What is your last name: ")
+# fname = input("What is your first name: ")
+# lname = input("What is your last name: ")
 
-username = genusername(fname, lname)
-print(f"Hello {fname}, your username is {username}")
+# username = genusername(fname, lname)
+# print(f"Hello {fname}, your username is {username}")
