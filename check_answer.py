@@ -1,44 +1,172 @@
+# abs() # returns the absolute value
+# print(abs(-2)) # return 2
+
+
+# ascii
+# print(chr(90)) # returns the key from
+# print(ord("a"))
+
+# generate a random password
+
+# num1 = 100
+# num2 = 200
+# num3 = num1 + num2
+
+# print(num1, "+", num2, "=", num3)
+
+# # f string
+# print(f"{num1} + {num2} = {num3}")
+
+# # format string
+# print("{} + {} = {}".format(num1, num2, num3))
+
+
+# word = "SINGAPORE"
+
+# #<str>.find() # searches for character, returns the index
+
+# check = word.find("GAP")
+# print(check)
+
+# ##### split string into list, without using split()
+
+# # email validation
+# email = "abc@email.com"
+
+# if email.find("@") == -1:
+#     print("email must contain @")
+
+# import math
+
+# print(math.ceil(3.1454675757865676457564))
+
+# print(int(-3.14))
+
+# print("The ".isspace())
+
+
+
+
+
+
+
+
+# Task 3
+# The task is to edit program code so that countries and their capital 
+# cities can be added to or removed from a dictionary.
+
+# The following program has a dictionary that contains countries 
+# and their capital cities. The program allows the user to:
+
+# • input a country
+# • input whether they want to remove a country and 
+#    its capital city from the dictionary
+# • input whether they want to add a country and its 
+#    capital city to the dictionary.
+
+
+# capital_cities = {
+#     'singapore':'Singapore',
+#     'japan':'Tokyo', 'australia':'Canberra',
+#     'england':'London',
+#     'france':'Paris',
+#     'germany':'Berlin'
+# }
+
+# country = input("Please enter the name of a country: ")
+# remove = input("Would you like to remove any of the entries? (Y or N): ")
+# add = input("Would you like to add a new entry? (Y or N): ")
+
+
+# For all sub-tasks, you can assume that all user input is valid.
+#  All countries input to be searched or removed are found in the dictionary.
+
+# Task 3.1
+# Edit the program so that it:
+# • converts the input for country to lower case
+# • searches the dictionary for the country input and outputs the capital city of that country.
+# Save your program.    [3]
+
+# capital_cities = {
+#     'singapore':'Singapore',
+#     'japan':'Tokyo', 'australia':'Canberra',
+#     'england':'London',
+#     'france':'Paris',
+#     'germany':'Berlin'
+# }
+
+# country = input("Please enter the name of a country: ").lower()
+# if country in capital_cities:
+#     cap_city = capital_cities[country]
+# print(cap_city)
+
+
+
+# remove = input("Would you like to remove any of the entries? (Y or N): ")
+# add = input("Would you like to add a new entry? (Y or N): ")
+
+
+# Task 3.2
+# Copy and paste your program from sub-task 3.1.
+# Edit the program so that if the user enters the value ‘Y’ for remove, the program:
+# • allows the user to input a country they want to remove from the dictionary
+# • converts the country input to lower case
+# • removes the country from the dictionary that is input by the user.
+
+# Save your program.   [3]
+
+# Task 3.3
+# Copy and paste your program from sub-task 3.2 .
+# Edit the program so that if the user enters the value ‘Y’ for add, the program:
+# • allows the user to input a country they want to add to the diction nary
+# • allows the user to input the capital city for the country they want to add
+# • adds the country and its capital city to the dictionary in the format country:capital
+# • outputs the dictionary at the end of the program.
+
+# [4]
+
+
 # A student is writing a program to note down 
 # the favourite sports of each of his classmates.
 # the program will help check how many students like a certain sport.
 
-# Write a program that will 
-# -------------------------------------------------
-# 1. ask how many students there are in the class # ???
-num_students = int(input("Enter the number of students: "))
+# # Write a program that will 
+# # -------------------------------------------------
+# # 1. ask how many students there are in the class # ???
+# num_students = int(input("Enter the number of students: "))
 
-# -------------------------------------------------
-sportlist = [] 
-# 2. for each student, ask what is their favourite sport
-for student in range(num_students):
-    sport = input("What is your favourite sport? ")
-	# 2a. Add the sport into a list
-    sportlist.append(sport)
+# # -------------------------------------------------
+# sportlist = [] 
+# # 2. for each student, ask what is their favourite sport
+# for student in range(num_students):
+#     sport = input("What is your favourite sport? ")
+# 	# 2a. Add the sport into a list
+#     sportlist.append(sport)
 
-print(sportlist) # testing
-# -------------------------------------------------
-# 3. After asking all the student's sport, 
-	# Ask the user to enter a sport to check how many students like the sport.
-check_sport = input("What sport do you want to check? ") 
-counter = 0
+# print(sportlist) # testing
+# # -------------------------------------------------
+# # 3. After asking all the student's sport, 
+# 	# Ask the user to enter a sport to check how many students like the sport.
+# check_sport = input("What sport do you want to check? ") 
+# counter = 0
 
-# -------------------------------------------------
-# 4. if the sport exist, print out how many people like the sport.
-# existence check
-if check_sport in sportlist:
-    # count how many people like it
-    for sport in sportlist:
-        if check_sport == sport:
-            counter = counter + 1 
+# # -------------------------------------------------
+# # 4. if the sport exist, print out how many people like the sport.
+# # existence check
+# if check_sport in sportlist:
+#     # count how many people like it
+#     for sport in sportlist:
+#         if check_sport == sport:
+#             counter = counter + 1 
     
-    print(f"{counter} students like {check_sport}")
-# -------------------------------------------------
-# 5. if the sport does not exist, print out an appropriate message.
-else:
-    print(f"Nobody likes {check_sport}")
+#     print(f"{counter} students like {check_sport}")
+# # -------------------------------------------------
+# # 5. if the sport does not exist, print out an appropriate message.
+# else:
+#     print(f"Nobody likes {check_sport}")
 
-# ** Assume that all inputs given are in lower case and valid.
-# ** the program will work for any number of students.
+# # ** Assume that all inputs given are in lower case and valid.
+# # ** the program will work for any number of students.
 
 
 
