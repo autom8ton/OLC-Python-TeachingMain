@@ -82,6 +82,14 @@
 # D7	    45-49	7
 # E8	    40-44	8
 # F9	    0-39	9
+
+# English	71           2
+# Higher Chinese	80   1
+# Chemistry	63           4
+# Geography	72           2
+# Mathematics	60       4
+# Physics	66           3
+# Computing	70           2
 #------------------------------------------------------------
 def getgradepoint(mark):
     mark = int(mark)
@@ -107,7 +115,7 @@ def getgradepoint(mark):
 
 
 
-def calL1R5(result):
+# def calL1R5(result):
 
 
 
@@ -127,7 +135,27 @@ def calL1R5(result):
 # • compute the remaining subjects as the R5 subjects
 # • add the grade points of the L1 and R5 subjects as the L1 R5 score [3]
 #------------------------------------------------------------
+def call1r5(result):
+    l1 = 0
+    r5 = 0
 
+    for sub, grade in result.items():
+        # curr_grade = getgradepoint(grade)
+
+        if sub == "English" and result["English"] < result["Higher Chinese"]:
+            l1 = getgradepoint(grade)
+        elif sub == "English" and result["English"] == result["Higher Chinese"]:
+            l1 = getgradepoint(grade)
+        elif sub == "Higher Chinese" and result["Higher Chinese"] < result["English"]:
+            l1 = getgradepoint(grade)
+        else:
+            r5 = r5 + getgradepoint(grade)
+    
+    return l1 + r5
+
+test = {"English":80, "Higher Chinese":80, "Chemistry":80, "Geography":80, 
+        "Mathematics":80, "Physics":80,"Computing":80} 
+print(call1r5(test))
 
 
 
