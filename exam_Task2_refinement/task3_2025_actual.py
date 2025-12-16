@@ -1,95 +1,63 @@
-
-# book_authors = {
-#     'Winnie the pooh': 'A. A. Milne',
-#     'The tale of peter rabbit': 'Beatrix Potter',
-#     'The wind in the willows': 'Kenneth Grahame',
-#     'The lion, the witch and the wardrobe': 'C. S. Lewis',
-#     'Charlie and the chocolate factory': 'Roald Dahl'
-# }
-
-# book = input('Please enter the title of a book: ')
-# add = input("Would you like to add a book> Y or N: ")
-# amend = input("Would you like to change the author of a book? Y or N: ")
-
-
 # Task 3.1
-# Edit the program so that it converts the 
-# first letter of the first word of the book title input 
-# for book to upper case.
+# Edit the program so that it converts the first letter of the first word
+#  of the book title input for book to upper case.
 # Save your program. [1]
 
-# book_authors = {
-#     'Winnie the pooh': 'A. A. Milne',
-#     'The tale of peter rabbit': 'Beatrix Potter',
-#     'The wind in the willows': 'Kenneth Grahame',
-#     'The lion, the witch and the wardrobe': 'C. S. Lewis',
-#     'Charlie and the chocolate factory': 'Roald Dahl'
-# }
+book_authors = {
+    'Winnie the pooh': 'A. A. Milne',
+    'The tale of peter rabbit': 'Beatrix Potter',
+    'The wind in the willows': 'Kenneth Grahame',
+    'The lion, the witch and the wardrobe': 'C. S. Lewis',
+    'Charlie and the chocolate factory': 'Roald Dahl'
+}
 
-# book = input('Please enter the title of a book: ')
-# # Task 3.1 
+book = input('Please enter the title of a book: ')
+add = input("Would you like to add a book> Y or N: ")
+amend = input("Would you like to change the author of a book? Y or N: ")
 
-# # using slicing
-# book = book[0].upper() + book[1:]
 
-# # print(book) # testing
-# add = input("Would you like to add a book> Y or N: ")
-# amend = input("Would you like to change the author of a book? Y or N: ")
+
 
 #--------------------------------------------------
 # Task 3.2
 
 # Copy and paste your program from sub-task 3.1.
 
-# Edit your program so that it outputs the 
-# author of the book that is input. 
+# Edit your program so that it outputs the author of the book that is input. 
 # A suitable output message must be used.
 
 # Save your program. [2]
-
-# book_authors = {
-#     'Winnie the pooh': 'A. A. Milne',
-#     'The tale of peter rabbit': 'Beatrix Potter',
-#     'The wind in the willows': 'Kenneth Grahame',
-#     'The lion, the witch and the wardrobe': 'C. S. Lewis',
-#     'Charlie and the chocolate factory': 'Roald Dahl'
-# }
-
-# book = input('Please enter the title of a book: ')
-# # Task 3.1 
-
-# # using slicing
-# book = book[0].upper() + book[1:]
-
-# # Task 3.2 start
-# author = book_authors[book]
-# print(f"The author of {book} is {author}")
-
-# # print(book) # testing
-# add = input("Would you like to add a book> Y or N: ")
-# amend = input("Would you like to change the author of a book? Y or N: ")
+#------------------------------------------------
 
 
+
+
+
+#------------------------------------------------
 # Task 3.3
 # Copy and paste your program from sub-task 3.2.
 
 # Edit your program so that if the user 
 # enters the value 'Y' when the user is asked about adding a book, it:
 
-# asks the user for the title of the book to be added
-# takes the title of the book as input
-# asks the user for the author of the book to be added
-# takes the author of the book as input
-# adds the title and its author to the dictionary in the format title:author
-# outputs the dictionary at the end of the program.
+# > asks the user for the title of the book to be added
+# >  takes the title of the book as input
+# >  asks the user for the author of the book to be added
+# >  takes the author of the book as input
+# >  adds the title and its author to the dictionary in the format title:author
+# >  outputs the dictionary at the end of the program.
 
-# You do not need to consider any validation for 
-# the input of the book title and the author. 
-# You do not need to convert the first letter of the 
-# first word of the book title to upper case.
+# You do not need to consider any validation for the input of the book title and the author. 
+# You do not need to convert the first letter of the first word of the book title to upper case.
 
 # Save your program. [4]
+#------------------------------------------------
 
+
+
+
+
+##########################################
 
 # book_authors = {
 #     'Winnie the pooh': 'A. A. Milne',

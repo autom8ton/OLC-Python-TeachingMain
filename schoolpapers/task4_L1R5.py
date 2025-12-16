@@ -124,6 +124,9 @@ def getgradepoint(mark):
 # • compute the remaining subjects as the R5 subjects
 # • add the grade points of the L1 and R5 subjects as the L1 R5 score [3]
 #------------------------------------------------------------
+
+
+
 def call1r5(result):
     l1 = 0
     r5 = 0
