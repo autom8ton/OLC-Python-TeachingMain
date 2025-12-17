@@ -19,9 +19,7 @@ F9    = 0-39   = 9
 
 # All codes should have appropriate comments and 
 # all identifiers should be appropriately named. [4] 
-
- 
-
+###########################################################
 # Task 4.1 
 
 # Write a function getgradepoint () that has a parameter mark passed to it. 
@@ -41,7 +39,7 @@ F9    = 0-39   = 9
 
 # ---------------------------------------
 
-###############################
+###########################################################
 # Task 4.2 
 
 # Write a function calL1R5() that takes the result as a parameter. 
@@ -59,9 +57,9 @@ F9    = 0-39   = 9
 # • compute the remaining subjects as the R5 subjects 
 # • add the grade points of the L1 and R5 subjects as the L1 R5 score 		
 # [6] 
-
-# Task 4.2
 #####################################################################
+# Task 4.2
+
 #---------------------------------------
 
 
@@ -78,6 +76,7 @@ F9    = 0-39   = 9
 #---------------------------------------
 
 ###############################################
+# Task 4.3
 # Your main program should use the calL1R5() function and display the L1R5 aggregate score.	
 # Your program will ask the user to input the scores of 7 subjects. 
 # You are not required to validate the inputs.
@@ -93,7 +92,7 @@ Mathematics = 60
 Physics = 66 
 Computing = 70 
 '''
-
+#####################################################################
 # Task 4.3
 #---------------------------------------
 
@@ -129,6 +128,7 @@ Computing = 70
 # Computed L1R5: 16 
 
 # Task 4.4
+#####################################################################
 #---------------------------------------
 
 
