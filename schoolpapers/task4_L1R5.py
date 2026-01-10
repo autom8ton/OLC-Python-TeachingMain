@@ -82,6 +82,7 @@
 # D7	    45-49	7
 # E8	    40-44	8
 # F9	    0-39	9
+
 #------------------------------------------------------------
 def getgradepoint(mark):
     mark = int(mark)
@@ -107,11 +108,7 @@ def getgradepoint(mark):
 
 
 
-def calL1R5(result):
-
-
-
-
+# def calL1R5(result):
 
 # Task 4.2
 # Write a function calL1R5( ) that takes the result as a parameter. 
@@ -130,8 +127,28 @@ def calL1R5(result):
 
 
 
+def call1r5(result):
+    l1 = 0
+    r5 = 0
 
+    eng = result["English"]
+    hchin = result["Higher Chinese"]
+    if eng > hchin or eng == hchin:
+        l1 = getgradepoint(result["English"])
+    else:
+        l1 = getgradepoint(result["Higher Chinese"])
 
+    for sub, grade in result.items():
+        if sub == "English" or sub == "Higher Chinese":
+            continue
+        else:
+            r5 = r5 + getgradepoint(grade)
+    
+    return l1 + r5
+
+# test = {"English":71, "Higher Chinese":80, "Chemistry":63, "Geography":72, 
+#         "Mathematics":60, "Physics":66,"Computing":70} 
+# print(call1r5(test))
 
 # Task 4.3
 # Your main program should use the calL1R5( ) function and display the L1R5
