@@ -1,41 +1,31 @@
 # G3 Computing Prelim Exam
-# Python Development Question - Number Base Conversion Library (50 marks)
+# Python Development Question - Number Base Conversion Library (42 marks)
 # You are to write a Python program to perform conversions 
 # between binary, denary, and hexadecimal numbers.
 
 # The program must be written using functions with return values, 
 # where each function builds on earlier results.
-# At the top of your program, declare the following constant:
-# HEX_DIGITS = "0123456789ABCDEF"
+
 # Your program must include appropriate input and output messages. 
 # All variables must be appropriately named, and suitable comments 
 # must be inserted to explain the algorithm. [4 marks]
 
 
 # ________________________________________
-# (a) Input and validation [6 marks]
-# Write a function get_valid_number(base) that:
-# •	Accepts a parameter base which can be 2, 10, or 16.
-# •	Repeatedly asks the user to enter a number in that base 
-#     until a valid number is provided.
-# •	Checks that:
-# o	For base 2: input only contains 0 and 1.
-# o	For base 10: input only contains digits 0-9.
-# o	For base 16: input only contains digits 0-9 and letters A-F (case-insensitive).
-# •	Returns the number string in uppercase (for base 16).
-# Hint: Use .strip() and convert to uppercase for consistent processing.
+# (a) check_valid_num(num, base) - Validate a number according to base [3]
+# Purpose: Checks that the user’s input contains only characters allowed in the given base. 
 
-# Question a
-def get_valid_base(base):
-    # change to string for checking
-    base = str(base)
-    if base in ["2", "10", "16"]:
-        return True
-    else:
-        return False
-    
-# Question b
+# Write a function check_valid_num(num, base) that:
+# Treats num as a string.
+#     Returns True only if every character is valid for the given base:
+# Base 2: only 0 and 1
+# Base 10: only digits 0–9
+# Base 16: only 0–9 and letters A–F (case-insensitive)
+# Returns False otherwise.
+
+# Task a
 def check_valid_num(num, base):
+
     # change to string for checking
     num = str(num).upper()
     base = str(base)
@@ -57,7 +47,7 @@ def check_valid_num(num, base):
 
 
 # ________________________________________
-# (c) Binary → Denary [6 marks]
+# (b) Binary → Denary [5 marks]
 # Write bin_to_den(binstring) that:
 # •	Reverses the string so the least significant bit is processed first.
 # •	Forms a place-value list [2**0, 2**1, …] matching the string length.
@@ -84,7 +74,7 @@ def bin_to_den(binstring):
 
 
 # ________________________________________
-# (d) Denary → Binary [6 marks]
+# (c) Denary → Binary [5 marks]
 # Write den_to_bin(den_num) that:
 # •	Uses repeated division by 2.
 # •	Collects remainders and prepends each remainder to build the binary string.
@@ -96,7 +86,7 @@ def den_to_bin(den_num):
         return "0"
     
     binary_string = "" # temporary value
-    num = den_num
+    num = int(den_num)
 
     while num > 0 : # keep dividing by 2 until quotient is zero
         remainder = num % 2 # find the remainder after division by 2
@@ -109,7 +99,7 @@ print(den_to_bin(231))
 
 
 # ________________________________________
-# (d) Denary → Hexadecimal [6 marks]
+# (d) Denary → Hexadecimal [5 marks]
 # Write den_to_hex(den_num) that:
 # •	Uses repeated division by 16.
 # •	Maps remainders 0..15 to digits using HEX_DIGITS.
@@ -121,6 +111,8 @@ print(den_to_bin(231))
 def den_to_hex(dennum):
     if dennum == 0:
         return "0"
+    else:
+        dennum = int(dennum)
     
     hex_digits = "0123456789ABCDEF" # use this to map the den num to hex
     hexes = "" # this is the output result
@@ -139,7 +131,7 @@ print(den_to_hex(255))
 
 
 # ________________________________________
-# (e) Hexadecimal → Denary [6 marks]
+# (e) Hexadecimal → Denary [8 marks]
 # Write hex_to_den(hexstring) that:
 # •	Converts input to uppercase.
 # •	Reverses the string so the least significant digit is processed first.
@@ -184,7 +176,7 @@ print(hex_to_den("1A3")) # expected 419
 
 
 # ________________________________________
-# (f) Binary → Hexadecimal (bridge via denary) [5 marks]
+# (f) Binary → Hexadecimal (bridge via denary) [2 marks]
 # Write bin_to_hex(binstring) that:
 # •	Validates the binary string (you may reuse checks from part (a) 
 #    or assume it has already been validated).
@@ -204,7 +196,7 @@ def bin_to_hex(binstring):
 print(bin_to_hex("1011111"))
 
 # ________________________________________
-# (g) Hexadecimal → Binary (bridge via denary) [5 marks]
+# (g) Hexadecimal → Binary (bridge via denary) [2 marks]
 # Write hex_to_bin(hexstring) that:
 # •	Validates the hex string (reuse from (a) or assume already validated); convert to uppercase.
 # •	Converts it to denary using your hex_to_den.
@@ -226,7 +218,7 @@ print(hex_to_bin("1FFD"))
 
 
 # ________________________________________
-# (h) Main program [6 marks]
+# (h) Main program [12 marks]
 # Write a menu-driven main program that:
 # 1.	Displays the following options:
 # o	(1) Binary → Denary

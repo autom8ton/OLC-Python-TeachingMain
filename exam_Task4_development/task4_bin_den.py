@@ -111,12 +111,12 @@
 # ________________________________________
 
 # the following code is provided to you.
-while True:
-    print("(1) Binary to Denary")
-    print("(2) Denary to Binary")
-    print("(3) Exit")
+# while True:
+#     print("(1) Binary to Denary")
+#     print("(2) Denary to Binary")
+#     print("(3) Exit")
 
-    option = input("Enter an option: ")
+#     option = input("Enter an option: ")
 
 
 
