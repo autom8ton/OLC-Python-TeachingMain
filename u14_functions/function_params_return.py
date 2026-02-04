@@ -2,7 +2,8 @@ import random
 
 # 1) Returns a random integer from 1 to sides
 def roll_dice(sides):
-    return random.randint(1, sides)
+    dice_num = random.randint(1, sides)
+    return dice_num
 
 # 2) Returns the final damage number
 def calculate_damage(attack_roll):
